@@ -1,0 +1,24 @@
+# User-specific files
+*.user
+
+# project files
+.vs/
+.idea/
+temp/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Others
+sql/
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+*.pfx
+node_modules/
+
+.DS_Store
+Thumbs.db
