@@ -82,6 +82,15 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
     * Fill and review README.md - look at examples
     * Make PR
 
+## Branch keeping
+
+* There are branches for each technology/language. Currently there are:
+    * 'dotnet' branch
+    * 'java' branch
+    * 'ruby' branch
+* Each branch have a working code which is the result of Kata practice
+* You can review code and add your comment on our cloud [Upsource](https://upsource.nspectator.org)
+
 #### References
 
 * TDD-Kata Practices: http://tddkatas.codeplex.com/
