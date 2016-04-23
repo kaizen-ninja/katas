@@ -28,11 +28,11 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
 
 -------------------
 
-### [The Bowling Game Kata](list/BowlingGame)
+### [Bowling Game Kata](list/BowlingGame)
 
 -------------------
 
-### [The FizzBuzz Kata](list/FizzBuzz)
+### [FizzBuzz Kata](list/FizzBuzz)
 
 -------------------
 

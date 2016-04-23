@@ -1,4 +1,5 @@
-## The Bowling Game Kata
+## Bowling Game Kata
+
 * Create a new project or start in the existing project by adding Game.cs and TestGame.cs
 * Create two public methods methods [refer to the presentation file]
 * Create Test Methods for the above Methods
