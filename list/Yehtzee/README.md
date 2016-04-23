@@ -36,7 +36,7 @@ category for a given roll.
 #### Yahzee Categories and Scoring Rules
 
 
-Chance:
+#####Chance:
 
 The player scores the sum of all dice, no matter what they read.
 For example,
@@ -44,14 +44,14 @@ For example,
 	   1,1,3,3,6 placed on "chance" scores 14 (1+1+3+3+6)
 	   4,5,5,6,1 placed on "chance" scores 21 (4+5+5+6+1)
 
-Yahtzee:
+#####Yahtzee:
 
 If all dice have the same number, the player scores 50 points.
 	  For example,
 	   1,1,1,1,1 placed on "yahtzee" scores 50
 	   1,1,1,2,1 placed on "yahtzee" scores 0
 
-Ones, Twos, Threes, Fours, Fives, Sixes:
+#####Ones, Twos, Threes, Fours, Fives, Sixes:
 
 The player scores the sum of the dice that reads one,
 two, three, four, five or six, respectively.
@@ -61,7 +61,7 @@ For example,
 	    2,3,2,5,1 placed on "twos" scores 4  (2+2)
 	    3,3,3,4,5 placed on "ones" scores 0
 
-Pair:
+#####Pair:
 
 The player scores the sum of the two highest matching dice.
 For example, when placed on "pair"
@@ -71,7 +71,7 @@ For example, when placed on "pair"
 	    3,3,3,4,1 scores 0
 	    3,3,3,3,1 scores 0
 
-Two pairs:
+#####Two pairs:
 
 If there are two pairs of dice with the same number, the
 player scores the sum of these dice.
@@ -81,7 +81,7 @@ For example, when placed on "two pairs"
 	    1,1,2,3,4 scores 0
 	    1,1,2,2,2 scores 0
 
-Three of a kind:
+#####Three of a kind:
 
 If there are three dice with the same number, the player
 scores the sum of these dice.
@@ -92,7 +92,7 @@ For example, when placed on "three of a kind"
 		3,3,4,5,6 scores 0
 		3,3,3,3,1 scores 0
 
-Four of a kind:
+#####Four of a kind:
 
 If there are four dice with the same number, the player
 scores the sum of these dice.
@@ -103,19 +103,19 @@ For example, when placed on "four of a kind"
 		2,2,2,5,5 scores 0
 		2,2,2,2,2 scores 0
 
-Small straight:
+#####Small straight:
 
 When placed on "small straight", if the dice read
 
         1,2,3,4,5, the player scores 15 (the sum of all the dice.
 
-Large straight:
+#####Large straight:
 
 When placed on "large straight", if the dice read
 
         2,3,4,5,6, the player scores 20 (the sum of all the dice).
 
-Full house:
+#####Full house:
 
 If the dice are two of a kind and three of a kind, the
 player scores the sum of all the dice.
