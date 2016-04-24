@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var fs = require('fs');
 var _ = require('lodash');
 var jasmine = require('gulp-jasmine');
+var del = require('del');
 
 var scripts = require('./app.scripts.json');
 
@@ -28,15 +29,22 @@ var destinations = {
     styles: 'build'
 };
 
-gulp.task('build', function(){
+gulp.task('clean', function() {
+    // You can use multiple globbing patterns as you would with `gulp.src`
+    return del(['build']);
+});
+
+function build(){
     gulp.src(source.js.main)
         .pipe(concat('katas.js'))
         .pipe(gulp.dest(destinations.js));
 
-    gulp.src(source.js.src)
+    return gulp.src(source.js.src)
         .pipe(concat('specs.js'))
         .pipe(gulp.dest(destinations.js));
-});
+}
+
+gulp.task('build', build);
 
 gulp.task('watch', function(){
     gulp.watch(source.js.main, ['js']);
@@ -84,15 +92,16 @@ gulp.task('vendor', function(){
     })
 });
 
-gulp.task('jasmine', function() {
-    gulp.src(source.js.build)
-        .pipe(concat('test.js'))
-        .pipe(gulp.dest(destinations.js))
-        // gulp-jasmine works on filepaths so you can't have any plugins before it 
-        .pipe(jasmine())
+gulp.task('test', function() {
+    build().on('end', function () {
+        gulp.src(source.js.build)
+            .pipe(concat('test.js'))
+            .pipe(gulp.dest(destinations.js))
+            // gulp-jasmine works on filepaths so you can't have any plugins before it 
+            .pipe(jasmine())   
+    });
 });
 
 gulp.task('prod', ['vendor', 'build']);
 gulp.task('dev', ['vendor', 'build', 'watch', 'connect']);
 gulp.task('default', ['dev']);
-gulp.task('test', ['vendor', 'build', 'jasmine']);
