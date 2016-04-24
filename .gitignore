@@ -19,6 +19,10 @@ ClientBin/
 *.dbmdl
 *.pfx
 node_modules/
+bower_components/
+
+# output
+build/
 
 .DS_Store
 Thumbs.db

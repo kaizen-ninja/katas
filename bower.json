@@ -1,0 +1,7 @@
+{
+  "name": "katas-karma",
+  "version": "1.0.0",
+  "dependencies": {
+    "jasmine-core": "~2.4.1"
+  }
+}

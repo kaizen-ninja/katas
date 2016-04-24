@@ -1,0 +1,20 @@
+{
+  "chunks": {
+    "vendor": [
+      "jasmine-core",
+	  "jasmine-html",
+      "jasmine-boot"
+    ]
+  },
+  "styles": {
+    "lib": [
+      "jasmine-css"
+    ]
+  },
+  "paths": {
+    "jasmine-core": "bower_components/jasmine-core/lib/jasmine-core/jasmine.js",
+	"jasmine-html": "bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js",
+    "jasmine-boot": "bower_components/jasmine-core/lib/jasmine-core/boot.js",
+    "jasmine-css": "bower_components/jasmine-core/lib/jasmine-core/jasmine.css"
+  }
+}
