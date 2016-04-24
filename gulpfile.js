@@ -95,4 +95,4 @@ gulp.task('jasmine', function() {
 gulp.task('prod', ['vendor', 'build']);
 gulp.task('dev', ['vendor', 'build', 'watch', 'connect']);
 gulp.task('default', ['dev']);
-gulp.task('test', ['prod', 'jasmine']);
+gulp.task('test', ['vendor', 'build', 'jasmine']);
