@@ -1,5 +1,7 @@
 #Katas : every day short-time xTDD practice
 
+[![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Read short guide: [Learning Test Driven Development with TDD Katas](http://goo.gl/5NYpVI)
 
 ## What is the Kata?
@@ -110,9 +112,14 @@ Difficulty: Easy
 
 * There are branches for each technology/language. Currently there are:
     * [dotnet](https://github.com/nspectator/katas/tree/dotnet) branch
-    * [java](https://github.com/nspectator/katas/tree/java) branch
+    * java branches
+        * suite written in [junit](https://github.com/nspectator/katas/tree/java/junit)
+        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit)
     * javascript branches
-        * [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+        * suite written in [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+    * python branches
+        * suite written with [behave](https://github.com/nspectator/katas/tree/python/behave)
+        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave)
     * ruby branch (to be added...)
 
     Every branch should contain [How to](howto) section
