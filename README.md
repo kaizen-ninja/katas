@@ -103,7 +103,7 @@ Difficulty: Easy
     * Make PR
 
 * Want to share your solution?
-    * Checkout specific branch, e.g. [java](https://github.com/nspectator/katas/tree/java)
+    * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
     * Create your branch <em>{kata-name}-{feature-name}</em>
     * Follow code guidance, add src for new kata or more tests for existing
     * Make PR
@@ -111,12 +111,15 @@ Difficulty: Easy
 ## Branch keeping
 
 * There are branches for each technology/language. Currently there are:
-    * [dotnet](https://github.com/nspectator/katas/tree/dotnet) branch
+    * .NET branches
+        * suite written with [nunit](https://github.com/nspectator/katas/tree/dotnet/csharp-nunit)
+        [![Build Status](https://ci.appveyor.com/api/projects/status/github/nspectator/katas?branch=dotnet/csharp-nunit&svg=true)](https://ci.appveyor.com/project/jonny-novikov/katas/history)
     * java branches
-        * suite written in [junit](https://github.com/nspectator/katas/tree/java/junit)
+        * suite written with [junit](https://github.com/nspectator/katas/tree/java/junit)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit)
     * javascript branches
-        * suite written in [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+        * suite written with [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine)
     * python branches
         * suite written with [behave](https://github.com/nspectator/katas/tree/python/behave)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave)
