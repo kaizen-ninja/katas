@@ -111,7 +111,12 @@ Difficulty: Easy
 * There are branches for each technology/language. Currently there are:
     * [dotnet](https://github.com/nspectator/katas/tree/dotnet) branch
     * [java](https://github.com/nspectator/katas/tree/java) branch
-    * 'ruby' branch
+    * javascript branches
+        * [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+    * ruby branch (to be added...)
+
+    Every branch should contain [How to](howto) section
+
 * Each branch have a working code which is the result of Kata practice
 * You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
 
