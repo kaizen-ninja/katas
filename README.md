@@ -1,5 +1,7 @@
 #Katas : every day short-time xTDD practice
 
+[![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Read short guide: [Learning Test Driven Development with TDD Katas](http://goo.gl/5NYpVI)
 
 ## What is the Kata?
