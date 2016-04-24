@@ -2,7 +2,7 @@ version: build{build}
 
 branches:
   only:
-  - dotnet
+  - dotnet/csharp-nunit
 
 cache:
   - packages -> **\packages.config
