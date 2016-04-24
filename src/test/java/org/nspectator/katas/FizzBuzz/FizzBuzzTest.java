@@ -1,7 +1,10 @@
 package org.nspectator.katas.FizzBuzz;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.*;
 
 /*
 For a given natural number greater than zero return:
@@ -15,26 +18,25 @@ public class FizzBuzzTest {
 
     @Test
     public void getResultShouldReturnFizzIfTheNumberIsDividableBy3() {
-        Assert.assertEquals("fizz", FizzBuzz.getResult(3));
+        assertThat("fizz", is(equalTo(FizzBuzz.getResult(3))));
     }
 
     @Test
     public void getResultShouldReturnBuzzIfTheNumberIsDividableBy5() {
-        Assert.assertEquals("buzz", FizzBuzz.getResult(5));
-        Assert.assertEquals("buzz", FizzBuzz.getResult(10));
+        assertThat("buzz", is(equalTo(FizzBuzz.getResult(5))));
+        assertThat("buzz", is(equalTo(FizzBuzz.getResult(10))));
     }
 
     @Test
     public void getResultShouldReturnBuzzIfTheNumberIsDividableBy15() {
-        Assert.assertEquals("fizzbuzz", FizzBuzz.getResult(15));
-        Assert.assertEquals("fizzbuzz", FizzBuzz.getResult(30));
+        assertThat("fizzbuzz", is(equalTo(FizzBuzz.getResult(15))));
+        assertThat("fizzbuzz", is(equalTo(FizzBuzz.getResult(30))));
     }
 
     @Test
     public void getResultShouldReturnTheSameNumberIfNoOtherRequirementIsFulfilled() {
-        Assert.assertEquals("1", FizzBuzz.getResult(1));
-        Assert.assertEquals("2", FizzBuzz.getResult(2));
-        Assert.assertEquals("4", FizzBuzz.getResult(4));
+        assertThat("1", is(equalTo(FizzBuzz.getResult(1))));
+        assertThat("2", is(equalTo(FizzBuzz.getResult(2))));
+        assertThat("4", is(equalTo(FizzBuzz.getResult(4))));
     }
-
 }
