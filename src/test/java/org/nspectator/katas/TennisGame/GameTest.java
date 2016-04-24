@@ -6,7 +6,8 @@ import org.junit.Test;
 import java.util.stream.IntStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.hasProperty;
 
 /*
 Implement a simple tennis game
