@@ -44,7 +44,25 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
 
 -------------------
 
-### [Natural Order String Sorting](list/NaturalStringSorting)
+### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+
+-------------------
+
+### [Berlin Clock Kata](list/BerlinClock)
+
+Difficulty: Easy
+
+-------------------
+
+### [Reverse Polish Notation Kata](list/ReversePolishNotation)
+
+Difficulty: Medium
+
+-------------------
+
+### [Tennis Game Kata](list/TennisGame)
+
+Difficulty: Easy
 
 -------------------
 
@@ -82,14 +100,20 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
     * Fill and review README.md - look at examples
     * Make PR
 
+* Want to share your solution?
+    * Checkout specific branch, e.g. [java](https://github.com/nspectator/katas/tree/java)
+    * Create your branch <em>{kata-name}-{feature-name}</em>
+    * Follow code guidance, add src for new kata or more tests for existing
+    * Make PR
+
 ## Branch keeping
 
 * There are branches for each technology/language. Currently there are:
-    * 'dotnet' branch
-    * 'java' branch
+    * [dotnet](https://github.com/nspectator/katas/tree/dotnet) branch
+    * [java](https://github.com/nspectator/katas/tree/java) branch
     * 'ruby' branch
 * Each branch have a working code which is the result of Kata practice
-* You can review code and add your comment on our cloud [Upsource](https://upsource.nspectator.org)
+* You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
 
 #### References
 
