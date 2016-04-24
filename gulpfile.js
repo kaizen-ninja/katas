@@ -4,6 +4,7 @@ var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
 var fs = require('fs');
 var _ = require('lodash');
+var jasmine = require('gulp-jasmine');
 
 var scripts = require('./app.scripts.json');
 
@@ -14,6 +15,10 @@ var source = {
             ],
         src: [
             'spec/FizbuzzSpec.js'
+        ],
+        build: [
+            'build/katas.js',
+            'build/specs.js'
         ]
     }
 };
@@ -79,6 +84,15 @@ gulp.task('vendor', function(){
     })
 });
 
+gulp.task('jasmine', function() {
+    gulp.src(source.js.build)
+        .pipe(concat('test.js'))
+        .pipe(gulp.dest(destinations.js))
+        // gulp-jasmine works on filepaths so you can't have any plugins before it 
+        .pipe(jasmine())
+});
+
 gulp.task('prod', ['vendor', 'build']);
 gulp.task('dev', ['vendor', 'build', 'watch', 'connect']);
 gulp.task('default', ['dev']);
+gulp.task('test', ['prod', 'jasmine']);

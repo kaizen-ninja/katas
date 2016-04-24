@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "0.11"
+  - "0.10"
+branches:
+  only:
+    - js/jasmine
+before_script:
+  - npm install -g bower
+  - npm install -g gulp
+  - bower install
+script: gulp test
