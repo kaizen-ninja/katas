@@ -119,6 +119,7 @@ Difficulty: Easy
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit)
     * javascript branches
         * suite written with [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
+        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine)
     * python branches
         * suite written with [behave](https://github.com/nspectator/katas/tree/python/behave)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave)
