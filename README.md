@@ -117,13 +117,17 @@ Difficulty: Easy
     * java branches
         * suite written with [junit](https://github.com/nspectator/katas/tree/java/junit)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit)
+    * groovy branches
+        * suite written with [spock](https://github.com/nspectator/katas/tree/groovy/spock)
+        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=groovy/spock)](https://travis-ci.org/nspectator/katas?branch=groovy/spock)
     * javascript branches
         * suite written with [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine)
     * python branches
         * suite written with [behave](https://github.com/nspectator/katas/tree/python/behave)
         [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave)
-    * ruby branch (to be added...)
+    * ruby
+        * suite written with rspec (to be added...)
 
     Every branch should contain [How to](howto) section
 
