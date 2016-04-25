@@ -1,7 +1,7 @@
 /* global describe, it, beforeEach, afterEach */
 /* eslint import/no-unresolved: 0, no-console: 0, prefer-arrow-callback: 0 */
 
-var FizzBuzz = require("../src/FizzBuzz");
+var FizzBuzz = require("../src/Fizzbuzz");
 var chai = require("chai");
 var sinonChai = require("sinon-chai");
 var sinon = require("sinon");
