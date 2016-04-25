@@ -20,6 +20,25 @@ Feel free to make pull request for adding new katas more frequently.
 
 Remember that the point of the kata is not arriving at a correct answer. The point is the stuff you learn along the way. The goal is the practice, not the solution.
 
+## Branch keeping
+
+* There are branches for each technology/language. Currently there are:
+
+| Branch | Language | Test suite | Build Status |
+| --- | --- | --- | --- |
+| [dotnet/csharp](https://github.com/nspectator/katas/tree/dotnet/csharp) | [C#](http://dotnet.github.io/docs/tutorials/index.html) | [NUnit](http://www.nunit.org/) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/nspectator/katas?branch=dotnet/csharp&svg=true)](https://ci.appveyor.com/project/jonny-novikov/katas/history) |
+| [java/junit](https://github.com/nspectator/katas/tree/dotnet/csharp-nunit) | [java](http://www.oracle.com/technetwork/java/javase/documentation/index.html) | [junit](http://junit.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit) |
+| [groovy/spock](https://github.com/nspectator/katas/tree/groovy/spock) | [groovy](http://www.groovy-lang.org/) | [spock](http://spockframework.github.io/spock/docs/1.0/index.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=groovy/spock)](https://travis-ci.org/nspectator/katas?branch=groovy/spock) |
+| [js/jasmine](https://github.com/nspectator/katas/tree/js/jasmine) | [javascript](http://www.w3schools.com/js/) | [jasmine](http://jasmine.github.io/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine) |
+| [python/behave](https://github.com/nspectator/katas/tree/python/behave) | [python](https://www.python.org/) | [behave](http://pythonhosted.org/behave/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave) |
+| [ruby/rspec](https://github.com/nspectator/katas/tree/ruby/rspec) | [ruby](https://www.ruby-lang.org) | [rspec](http://rspec.info/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=ruby/rspec)](https://travis-ci.org/nspectator/katas?branch=ruby/rspec) |
+
+* Every branch should contain [How to](howto) section
+* Each branch have a working code which is the result of Kata practice.
+That`s why it should be integrated with some continuous integraion server aka [Travis](https://travis-ci.org/nspectator/katas)
+or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
+* You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
+
 ## List of Katas
 
 ### [String Sum Kata](list/StringSum)
@@ -68,6 +87,12 @@ Difficulty: Easy
 
 -------------------
 
+### [Sudoku Kata](list/Sudoku)
+
+Difficulty: Easy
+
+-------------------
+
 ## Kata challenge
 
 #### [Calc Stats Kata](list/CalcStats)
@@ -107,28 +132,6 @@ Difficulty: Easy
     * Create your branch <em>{kata-name}-{feature-name}</em>
     * Follow code guidance, add src for new kata or more tests for existing
     * Make PR
-
-## Branch keeping
-
-* There are branches for each technology/language. Currently there are:
-    * .NET branches
-        * suite written with [nunit](https://github.com/nspectator/katas/tree/dotnet/csharp-nunit)
-        [![Build Status](https://ci.appveyor.com/api/projects/status/github/nspectator/katas?branch=dotnet/csharp-nunit&svg=true)](https://ci.appveyor.com/project/jonny-novikov/katas/history)
-    * java branches
-        * suite written with [junit](https://github.com/nspectator/katas/tree/java/junit)
-        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit)
-    * javascript branches
-        * suite written with [jasmine](https://github.com/nspectator/katas/tree/js/jasmine)
-        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine)
-    * python branches
-        * suite written with [behave](https://github.com/nspectator/katas/tree/python/behave)
-        [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave)
-    * ruby branch (to be added...)
-
-    Every branch should contain [How to](howto) section
-
-* Each branch have a working code which is the result of Kata practice
-* You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
 
 #### References
 
