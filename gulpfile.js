@@ -44,7 +44,9 @@ function build(){
         .pipe(gulp.dest(destinations.js));
 }
 
-gulp.task('build', build);
+gulp.task('build', function(){
+    build(); //.pipe(connect.reload());
+});
 
 gulp.task('watch', function(){
     gulp.watch(source.js.main, ['js']);
@@ -52,8 +54,13 @@ gulp.task('watch', function(){
 
 gulp.task('connect', function() {
     connect.server({
-        port: 8888
+        port: 8888,
+        livereload: true
     });
+});
+
+gulp.task('stop', function () {
+    connect.serverClose(); 
 });
 
 gulp.task('vendor', function(){
