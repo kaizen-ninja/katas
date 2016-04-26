@@ -22,7 +22,7 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
 
 ## Branch keeping
 
-* There are branches for each technology/language. Currently there are:
+There are branches for each technology/language. Currently there are:
 
 | Branch | Language | Test suite | Build Status |
 | --- | --- | --- | --- |
@@ -35,8 +35,10 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
 | [cpp/igloo](https://github.com/nspectator/katas/tree/cpp/igloo) | [C++](http://www.cplusplus.com/) | [igloo](http://igloo-testing.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=cpp/igloo)](https://travis-ci.org/nspectator/katas?branch=cpp/igloo) |
 | [ruby/rspec](https://github.com/nspectator/katas/tree/ruby/rspec) | [ruby](https://www.ruby-lang.org) | [rspec](http://rspec.info/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=ruby/rspec)](https://travis-ci.org/nspectator/katas?branch=ruby/rspec) |
 
+#### Agreements
+
 * Every branch should contain [How to](howto) section
-* Each branch have a working code which is the result of Kata practice.
+* Each branch have a working (and test-covered) code which is the result of Kata practice.
 That`s why it should be integrated with some continuous integraion server aka [Travis](https://travis-ci.org/nspectator/katas)
 or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 * You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
@@ -123,17 +125,26 @@ Difficulty: Easy
 
 ## Contributing
 
+* [master](https://github.com/nspectator/katas) branch contains <em>list</em> folder with Kata descriptions
+
 * If you want to add new Kata with description then do following steps
     * Create branch with the name of Kata
     * Add folder with Kata name under list folder
     * Fill and review README.md - look at examples
-    * Make PR
+    * Make PR to master
 
 * Want to share your solution?
+    * Fork repository
     * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
     * Create your branch <em>{kata-name}-{feature-name}</em>
     * Follow code guidance, add src for new kata or more tests for existing
-    * Make PR
+    * Make PR to branch you have checkout (not master)
+
+* Geek section
+    * If you want to add new language support - create {lang}/{test-suite} branch and implement some Katas
+    * Make PR to create this new branch in this repo to share with others
+
+We shaped and benefited by hard work from our [contributors](https://github.com/nspectator/katas/contributors).
 
 #### References
 
