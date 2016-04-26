@@ -36,5 +36,3 @@ Context(FizzBuzz_Kata) {
         Assert::That("4", Is().EqualTo(FizzBuzz::getResult(4)));
     }
 };
-
-    
