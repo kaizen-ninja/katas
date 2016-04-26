@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\igloo">
+      <UniqueIdentifier>{2dc374d5-ee0c-4c7d-8a21-d439e210c0dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\core">
+      <UniqueIdentifier>{e9eb6117-af59-4085-80c0-35630011f4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external">
+      <UniqueIdentifier>{1928728c-a8c5-448d-a2a1-43591bdee872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\choices">
+      <UniqueIdentifier>{0accc196-2856-4c59-b52b-a72d2315dd30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse">
+      <UniqueIdentifier>{57e89cc0-395f-4922-a3e3-5607a9d2e3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\core\outputters">
+      <UniqueIdentifier>{d87ffce4-e232-4197-8a95-4ec6f1c44810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\core\testlisteners">
+      <UniqueIdentifier>{7b37eed5-db98-4343-ac86-f29e14fcbefa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{2699eaaf-ab46-4f25-8bd3-6dc916d34cf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse">
+      <UniqueIdentifier>{7bcb30d9-04ce-4e53-9000-28a59cc0918b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse\constraints">
+      <UniqueIdentifier>{b99bfbe2-c78e-42ca-a779-f100d97ea01c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse\constraints\expressions">
+      <UniqueIdentifier>{eea6d941-e376-42de-ab13-50ef5e87b1fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse\fluent">
+      <UniqueIdentifier>{18237d0a-04ba-4f86-b4f3-094f4857844f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse\fluent\operators">
+      <UniqueIdentifier>{f798de58-0f0d-43c9-ab82-5bd3d4701628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections">
+      <UniqueIdentifier>{452a13eb-243e-4b68-a37a-70f4364a3c11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\igloo\igloo.h">
+      <Filter>Header Files\igloo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\igloo_alt.h">
+      <Filter>Header Files\igloo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\igloo_framework.h">
+      <Filter>Header Files\igloo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\alternativeregistrationaliases.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\context.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\contextbase.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\contextprovider.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\contextregistry.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\contextrunner.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\core.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\defaultregistrationaliases.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\registration.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testlistener.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testlisteneraggregator.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testresult.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testresultfactory.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testresults.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testrunner.h">
+      <Filter>Header Files\igloo\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\coloredconsoletestresultsoutput.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\consoleoutputcolors.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\defaulttestresultsoutput.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\outputters.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\testresultsoutput.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\visualstudiooutput.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\xmlwriter.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\outputters\xunitoutput.h">
+      <Filter>Header Files\igloo\core\outputters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testlisteners\minimalprogresstestlistener.h">
+      <Filter>Header Files\igloo\core\testlisteners</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\core\testlisteners\testlisteners.h">
+      <Filter>Header Files\igloo\core\testlisteners</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tests\katas_test.h">
+      <Filter>Source Files\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\assert.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\assertionexception.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\assertmacro.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\exceptions.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\snowhouse.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\stringize.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\stringizers.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\constraints.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\containsconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\endswithconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\equalsconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\equalscontainerconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\equalswithdeltaconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\fulfillsconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\haslengthconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\isgreaterthanconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\isgreaterthanorequaltoconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\islessthanconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\islessthanorequaltoconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\startswithconstraint.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\expressions\andexpression.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints\expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\expressions\expression.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints\expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\expressions\expression_fwd.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints\expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\expressions\notexpression.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints\expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\constraints\expressions\orexpression.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\constraints\expressions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\constraintadapter.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\constraintlist.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\expressionbuilder.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\fluent.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\andoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\constraintoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\invalidexpressionexception.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\notoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\oroperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\alloperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\atleastoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\atmostoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\collectionconstraintevaluator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\collectionoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\exactlyoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\igloo\external\snowhouse\snowhouse\fluent\operators\collections\noneoperator.h">
+      <Filter>Header Files\igloo\external\snowhouse\showhouse\fluent\operators\collections</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tests\FizzBuzz.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tests\main.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
