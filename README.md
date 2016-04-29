@@ -45,35 +45,35 @@ or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 
 ## List of Katas
 
-### [String Sum Kata](list/StringSum)
+#### [String Sum Kata](list/StringSum)
 
 -------------------
 
-### [String Calculator Kata](list/StringCalculator)
+#### [String Calculator Kata](list/StringCalculator)
 
 -------------------
 
-### [Bowling Game Kata](list/BowlingGame)
+#### [Bowling Game Kata](list/BowlingGame)
 
 -------------------
 
-### [FizzBuzz Kata](list/FizzBuzz)
+#### [FizzBuzz Kata](list/FizzBuzz)
 
 -------------------
 
-### [OddEven Kata](list/OddEven)
+#### [OddEven Kata](list/OddEven)
 
 -------------------
 
-### [PrimeComposite Kata](list/PrimeFactor)
+#### [PrimeComposite Kata](list/PrimeFactor)
 
 -------------------
 
-### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+#### [Natural Order String Sorting Kata](list/NaturalStringSorting)
 
 -------------------
 
-### [Berlin Clock Kata](list/BerlinClock)
+#### [Berlin Clock Kata](list/BerlinClock)
 
 Difficulty: Easy
 
@@ -97,31 +97,65 @@ Difficulty: Easy
 
 -------------------
 
-## Kata challenge
-
 #### [Calc Stats Kata](list/CalcStats)
+
+-------------------
 
 #### [Diversion Kata](list/Diversion)
 
+-------------------
+
 #### [Game of Life Kata](list/GameOfLife)
+
+-------------------
 
 #### [Harry Potter Kata](list/HarryPotter)
 
+-------------------
+
 #### [LCD Digits Kata](list/LCD-Digits)
+
+-------------------
 
 #### [Leap Year Kata](list/LeapYear)
 
+-------------------
+
 #### [Mine Fields Kata](list/MineFields)
+
+-------------------
 
 #### [Poker Hands Kata](list/PockerHands)
 
+-------------------
+
 #### [Recently Used List Kata](list/RecentlyUsedList)
+
+-------------------
 
 #### [Reversi Kata](list/Reversi)
 
+-------------------
+
 #### [Yehtzee Game Kata](list/Yehtzee)
 
+-------------------
+
 #### [Word Wrap Kata](list/WordWrap)
+
+-------------------
+
+#### [Bank OCR](list/BankOCR)
+
+Difficulty: Medium
+
+-------------------
+
+### Katas from [Dave Thomas](https://pragdave.me/)
+
+#### [Supermarket Pricing Kata](list/SupermarketPricing)
+
+-------------------
 
 ## Contributing
 

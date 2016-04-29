@@ -1,4 +1,4 @@
-# Kata BankOCR
+## BankOCR Kata
 
 ## Problem Description
 
