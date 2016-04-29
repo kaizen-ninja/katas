@@ -1,4 +1,4 @@
-#Katas : every day short-time xTDD practice
+# Katas : every day short-time xTDD practice
 
 [![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -45,35 +45,41 @@ or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 
 ## List of Katas
 
-### [String Sum Kata](list/StringSum)
+#### [Bear And Steady Gene Kata](list/BearAndSteadyGene)
+
+Difficulty: Hard
 
 -------------------
 
-### [String Calculator Kata](list/StringCalculator)
+#### [String Sum Kata](list/StringSum)
 
 -------------------
 
-### [Bowling Game Kata](list/BowlingGame)
+#### [String Calculator Kata](list/StringCalculator)
 
 -------------------
 
-### [FizzBuzz Kata](list/FizzBuzz)
+#### [Bowling Game Kata](list/BowlingGame)
 
 -------------------
 
-### [OddEven Kata](list/OddEven)
+#### [FizzBuzz Kata](list/FizzBuzz)
 
 -------------------
 
-### [PrimeComposite Kata](list/PrimeFactor)
+#### [OddEven Kata](list/OddEven)
 
 -------------------
 
-### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+#### [PrimeComposite Kata](list/PrimeFactor)
 
 -------------------
 
-### [Berlin Clock Kata](list/BerlinClock)
+#### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+
+-------------------
+
+#### [Berlin Clock Kata](list/BerlinClock)
 
 Difficulty: Easy
 
@@ -97,31 +103,65 @@ Difficulty: Easy
 
 -------------------
 
-## Kata challenge
-
 #### [Calc Stats Kata](list/CalcStats)
+
+-------------------
 
 #### [Diversion Kata](list/Diversion)
 
+-------------------
+
 #### [Game of Life Kata](list/GameOfLife)
+
+-------------------
 
 #### [Harry Potter Kata](list/HarryPotter)
 
+-------------------
+
 #### [LCD Digits Kata](list/LCD-Digits)
+
+-------------------
 
 #### [Leap Year Kata](list/LeapYear)
 
+-------------------
+
 #### [Mine Fields Kata](list/MineFields)
+
+-------------------
 
 #### [Poker Hands Kata](list/PockerHands)
 
+-------------------
+
 #### [Recently Used List Kata](list/RecentlyUsedList)
+
+-------------------
 
 #### [Reversi Kata](list/Reversi)
 
+-------------------
+
 #### [Yehtzee Game Kata](list/Yehtzee)
 
+-------------------
+
 #### [Word Wrap Kata](list/WordWrap)
+
+-------------------
+
+#### [Bank OCR](list/BankOCR)
+
+Difficulty: Medium
+
+-------------------
+
+### Katas from [Dave Thomas](https://pragdave.me/)
+
+#### [Supermarket Pricing Kata](list/SupermarketPricing)
+
+-------------------
 
 ## Contributing
 
@@ -136,7 +176,7 @@ Difficulty: Easy
 * Want to share your solution?
     * Fork repository
     * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
-    * Create your branch <em>{kata-name}-{feature-name}</em>
+    * Create your branch *{kata-name}-{feature-name}*
     * Follow code guidance, add src for new kata or more tests for existing
     * Make PR to branch you have checkout (not master)
 
