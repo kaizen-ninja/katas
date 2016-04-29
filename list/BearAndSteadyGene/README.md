@@ -57,5 +57,5 @@ The replaced substring has length `5`, so we print `5` on a new line.
 
 ## References
 
-[Description](http://juliachencoding.blogspot.ru/2016/03/hackerrank-bear-steady-gene-ii.html)
-[Code samples](https://gist.github.com/jianminchen/b8263048c297473319c23836e9468c14)
+* [Description](http://juliachencoding.blogspot.ru/2016/03/hackerrank-bear-steady-gene-ii.html)
+* [Code samples](https://gist.github.com/jianminchen/b8263048c297473319c23836e9468c14)
