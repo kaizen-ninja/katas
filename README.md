@@ -1,4 +1,4 @@
-#Katas : every day short-time xTDD practice
+# Katas : every day short-time xTDD practice
 
 [![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -44,6 +44,12 @@ or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 * You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
 
 ## List of Katas
+
+#### [Bear And Steady Gene Kata](list/BearAndSteadyGene)
+
+Difficulty: Hard
+
+-------------------
 
 #### [String Sum Kata](list/StringSum)
 
@@ -170,7 +176,7 @@ Difficulty: Medium
 * Want to share your solution?
     * Fork repository
     * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
-    * Create your branch <em>{kata-name}-{feature-name}</em>
+    * Create your branch *{kata-name}-{feature-name}*
     * Follow code guidance, add src for new kata or more tests for existing
     * Make PR to branch you have checkout (not master)
 
