@@ -1,5 +1,7 @@
 # Bear and Steady Gene
 
+## Problem description
+
 A gene is represented as a string of length `n` (where nn is divisible by `4`),
 composed of the letters `A`, `C`, `T`, and `G`. It is considered to be *steady* if each of the four
 letters occurs exactly `n/4` times. For example, `GACT` and `AAGTGCCT` are both steady genes.
@@ -52,3 +54,8 @@ GAAATAAA
 
 One optimal solution is to replace a substring `AAATA` with `TTCCG`, resulting in `GTTCCGAA`.
 The replaced substring has length `5`, so we print `5` on a new line.
+
+## References
+
+[Description](http://juliachencoding.blogspot.ru/2016/03/hackerrank-bear-steady-gene-ii.html)
+[Code samples](https://gist.github.com/jianminchen/b8263048c297473319c23836e9468c14)
