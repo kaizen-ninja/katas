@@ -1,4 +1,4 @@
-#Katas : every day short-time xTDD practice
+# Katas : every day short-time xTDD practice
 
 [![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -22,54 +22,64 @@ Remember that the point of the kata is not arriving at a correct answer. The poi
 
 ## Branch keeping
 
-* There are branches for each technology/language. Currently there are:
+There are branches for each technology/language. Currently there are:
 
 | Branch | Language | Test suite | Build Status |
 | --- | --- | --- | --- |
 | [dotnet/csharp](https://github.com/nspectator/katas/tree/dotnet/csharp) | [C#](http://dotnet.github.io/docs/tutorials/index.html) | [NUnit](http://www.nunit.org/) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/nspectator/katas?branch=dotnet/csharp&svg=true)](https://ci.appveyor.com/project/jonny-novikov/katas/history) |
 | [java/junit](https://github.com/nspectator/katas/tree/dotnet/csharp-nunit) | [java](http://www.oracle.com/technetwork/java/javase/documentation/index.html) | [junit](http://junit.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit) |
 | [groovy/spock](https://github.com/nspectator/katas/tree/groovy/spock) | [groovy](http://www.groovy-lang.org/) | [spock](http://spockframework.github.io/spock/docs/1.0/index.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=groovy/spock)](https://travis-ci.org/nspectator/katas?branch=groovy/spock) |
-| [js/jasmine](https://github.com/nspectator/katas/tree/js/jasmine) | [javascript](http://www.w3schools.com/js/) | [jasmine](http://jasmine.github.io/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine) |
+| [js/jasmine](https://github.com/nspectator/katas/tree/js/jasmine) | [javascript](http://www.w3schools.com/js/) | [jasmine](http://jasmine.github.io/) |  [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine) |
+| [js/mocha](https://github.com/nspectator/katas/tree/js/mocha) | [javascript](http://www.w3schools.com/js/) | [mochajs](https://mochajs.org/), [chaijs](http://chaijs.com/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/mocha)](https://travis-ci.org/nspectator/katas?branch=js/mocha) |
 | [python/behave](https://github.com/nspectator/katas/tree/python/behave) | [python](https://www.python.org/) | [behave](http://pythonhosted.org/behave/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave) |
+| [cpp/igloo](https://github.com/nspectator/katas/tree/cpp/igloo) | [C++](http://www.cplusplus.com/) | [igloo](http://igloo-testing.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=cpp/igloo)](https://travis-ci.org/nspectator/katas?branch=cpp/igloo) |
 | [ruby/rspec](https://github.com/nspectator/katas/tree/ruby/rspec) | [ruby](https://www.ruby-lang.org) | [rspec](http://rspec.info/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=ruby/rspec)](https://travis-ci.org/nspectator/katas?branch=ruby/rspec) |
 
+#### Agreements
+
 * Every branch should contain [How to](howto) section
-* Each branch have a working code which is the result of Kata practice.
+* Each branch have a working (and test-covered) code which is the result of Kata practice.
 That`s why it should be integrated with some continuous integraion server aka [Travis](https://travis-ci.org/nspectator/katas)
 or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 * You can review code and add your comment on our [Upsource](http://review.nspectator.org) instance
 
 ## List of Katas
 
-### [String Sum Kata](list/StringSum)
+#### [Bear And Steady Gene Kata](list/BearAndSteadyGene)
+
+Difficulty: Hard
 
 -------------------
 
-### [String Calculator Kata](list/StringCalculator)
+#### [String Sum Kata](list/StringSum)
 
 -------------------
 
-### [Bowling Game Kata](list/BowlingGame)
+#### [String Calculator Kata](list/StringCalculator)
 
 -------------------
 
-### [FizzBuzz Kata](list/FizzBuzz)
+#### [Bowling Game Kata](list/BowlingGame)
 
 -------------------
 
-### [OddEven Kata](list/OddEven)
+#### [FizzBuzz Kata](list/FizzBuzz)
 
 -------------------
 
-### [PrimeComposite Kata](list/PrimeFactor)
+#### [OddEven Kata](list/OddEven)
 
 -------------------
 
-### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+#### [PrimeComposite Kata](list/PrimeFactor)
 
 -------------------
 
-### [Berlin Clock Kata](list/BerlinClock)
+#### [Natural Order String Sorting Kata](list/NaturalStringSorting)
+
+-------------------
+
+#### [Berlin Clock Kata](list/BerlinClock)
 
 Difficulty: Easy
 
@@ -93,45 +103,88 @@ Difficulty: Easy
 
 -------------------
 
-## Kata challenge
-
 #### [Calc Stats Kata](list/CalcStats)
+
+-------------------
 
 #### [Diversion Kata](list/Diversion)
 
+-------------------
+
 #### [Game of Life Kata](list/GameOfLife)
+
+-------------------
 
 #### [Harry Potter Kata](list/HarryPotter)
 
+-------------------
+
 #### [LCD Digits Kata](list/LCD-Digits)
+
+-------------------
 
 #### [Leap Year Kata](list/LeapYear)
 
+-------------------
+
 #### [Mine Fields Kata](list/MineFields)
+
+-------------------
 
 #### [Poker Hands Kata](list/PockerHands)
 
+-------------------
+
 #### [Recently Used List Kata](list/RecentlyUsedList)
+
+-------------------
 
 #### [Reversi Kata](list/Reversi)
 
+-------------------
+
 #### [Yehtzee Game Kata](list/Yehtzee)
+
+-------------------
 
 #### [Word Wrap Kata](list/WordWrap)
 
+-------------------
+
+#### [Bank OCR](list/BankOCR)
+
+Difficulty: Medium
+
+-------------------
+
+### Katas from [Dave Thomas](https://pragdave.me/)
+
+#### [Supermarket Pricing Kata](list/SupermarketPricing)
+
+-------------------
+
 ## Contributing
+
+* [master](https://github.com/nspectator/katas) branch contains <em>list</em> folder with Kata descriptions
 
 * If you want to add new Kata with description then do following steps
     * Create branch with the name of Kata
     * Add folder with Kata name under list folder
     * Fill and review README.md - look at examples
-    * Make PR
+    * Make PR to master
 
 * Want to share your solution?
+    * Fork repository
     * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
-    * Create your branch <em>{kata-name}-{feature-name}</em>
+    * Create your branch *{kata-name}-{feature-name}*
     * Follow code guidance, add src for new kata or more tests for existing
-    * Make PR
+    * Make PR to branch you have checkout (not master)
+
+* Geek section
+    * If you want to add new language support - create {lang}/{test-suite} branch and implement some Katas
+    * Make PR to create this new branch in this repo to share with others
+
+We shaped and benefited by hard work from our [contributors](https://github.com/nspectator/katas/contributors).
 
 #### References
 
