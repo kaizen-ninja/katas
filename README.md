@@ -34,6 +34,7 @@ There are branches for each technology/language. Currently there are:
 | [python/behave](https://github.com/nspectator/katas/tree/python/behave) | [python](https://www.python.org/) | [behave](http://pythonhosted.org/behave/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave) |
 | [cpp/igloo](https://github.com/nspectator/katas/tree/cpp/igloo) | [C++](http://www.cplusplus.com/) | [igloo](http://igloo-testing.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=cpp/igloo)](https://travis-ci.org/nspectator/katas?branch=cpp/igloo) |
 | [ruby/rspec](https://github.com/nspectator/katas/tree/ruby/rspec) | [ruby](https://www.ruby-lang.org) | [rspec](http://rspec.info/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=ruby/rspec)](https://travis-ci.org/nspectator/katas?branch=ruby/rspec) |
+| [elixir/exunit](https://github.com/nspectator/katas/tree/elixir/exunit) | [Elixir](http://elixir-lang.org) | [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=elixir/exunit)](https://travis-ci.org/nspectator/katas?branch=elixir/exunit) |
 
 #### Agreements
 
