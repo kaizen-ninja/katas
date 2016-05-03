@@ -1,8 +1,8 @@
 ## BankOCR Kata
 
-## Problem Description
+### Problem Description
 
-### User Story 1
+#### User Story 1
 
 You work for a bank, which has recently purchased an ingenious machine to assist in reading
 letters and faxes sent in by branch offices. The machine scans the paper documents,
@@ -19,7 +19,7 @@ all of which should be in the range 0-9. A normal file contains around 500 entri
 
 Your first task is to write a program that can take this file and parse it into actual account numbers.
 
-### User Story 2
+#### User Story 2
 
 Having done that, you quickly realize that the ingenious machine is not in fact infallible.
 Sometimes it goes wrong in its scanning. The next step therefore is to validate that the numbers
@@ -36,7 +36,7 @@ checksum calculation:
 So now you should also write some code that calculates the checksum for a given number,
 and identifies if it is a valid account number.
 
-### User Story 3
+#### User Story 3
 
 Your boss is keen to see your results. He asks you to write out a file of your findings,
 one for each input file, in this format:
@@ -48,7 +48,7 @@ one for each input file, in this format:
 ie the file has one account number per row. If some characters are illegible, they are replaced by a ?.
 In the case of a wrong checksum, or illegible number, this is noted in a second column indicating status.
 
-### User Story 4
+#### User Story 4
 
 It turns out that often when a number comes back as ERR or ILL it is because the scanner has failed
 to pick up on one pipe or underscore for one of the figures. For example
@@ -65,7 +65,7 @@ If there is only one possible number with a valid checksum, then use that. If th
 options, the status should be AMB. If you still can't work out what it should be, the status
 should be reported ```ILL```.
 
-## Clues
+### Clues
 
 I recommend finding a way to write out 3x3 cells on 3 lines in your code, so they form an
 identifiable digits. Even if your code actually doesn't represent them like that internally.
@@ -89,7 +89,7 @@ Some gotchas to avoid:
 * The spec does not list all the possible alternatives for valid digits when one pipe or underscore has been removed or added
 * don't forget to try to work out what a ```?``` should have been by adding or removing one pipe or underscore.
 
-## Suggested Test Cases
+### Suggested Test Cases
 
 If you want to just copy and paste these test cases into your editor, I suggest first clicking
 "edit this page" so you can see the source. Then you can be sure to copy across all the
@@ -307,7 +307,7 @@ use case 4
 => 490867715
 ```
 
-## Comments from those who are working on this Kata
+### Comments from those who are working on this Kata
 
 Here you could write some thoughts about what you have learnt from this Kata.
 If you want to discuss your approach and give some code samples, you might
@@ -315,7 +315,7 @@ want to link to a new page "KataXByY?". You don't have to post all the code of y
 solution, or claim that it is the best possible solution. What is interesting is
 your insights into the problem, and decisions you made in the past.
 
-## References
+### References
 
 This Kata was presented at XP2006 by [Emmanuel Gaillot](http://codingdojo.org/cgi-bin/index.pl?EmmanuelGaillot)
 and [Christophe Thibaut](http://codingdojo.org/cgi-bin/index.pl?action=edit&id=ChristopheThibaut).

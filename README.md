@@ -151,7 +151,13 @@ Difficulty: Easy
 
 -------------------
 
-#### [Bank OCR](list/BankOCR)
+#### [Bank OCR Kata](list/BankOCR)
+
+Difficulty: Medium
+
+-------------------
+
+#### [Labyrinth Kata](list/Labyrinth)
 
 Difficulty: Medium
 
