@@ -14,14 +14,17 @@ namespace Labyrinth
         End
     }
 
-    public interface IPath<out TNode, out TDirection> : IEnumerable<TNode>
+    public interface IPath<out TSteps, out TNode, out TDirection> : IEnumerable<TNode>
+        where TSteps : IEnumerable<TNode>
     {
         TDirection LastDirection { get; }
 
         TNode LastStep { get; }
+
+        TSteps PreviousSteps { get; }
     }
 
-    public class MovingPath<TNode> : IPath<TNode, MoveDirection>
+    public class MovingPath<TNode> : IPath<MovingPath<TNode>, TNode, MoveDirection>
     {
         public MoveDirection LastDirection { get; }
 

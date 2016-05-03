@@ -81,7 +81,7 @@ namespace Labyrinth
                 {
                     int x = cell.Row + step.Item1, y = cell.Col + step.Item2;
                     if (!InRange(x, y) || !IsVisited(x, y)) continue;
-
+                    // Returned back to starting cell -> exit loop
                     if (_cells[x, y].Distance == 0)
                     {
                         prev = _cells[x, y];
@@ -90,17 +90,10 @@ namespace Labyrinth
                         direction = MoveDirection.Start;
                         break;
                     }
-                    if (prev != null)
-                    {
-                        if (_cells[x, y].Distance >= prev.Distance) continue;
-                        prev = _cells[x, y];
-                        direction = step.Item4;
-                    }
-                    else
-                    {
-                        prev = _cells[x, y];
-                        direction = step.Item4;
-                    }
+                    if (prev != null && _cells[x, y].Distance >= prev.Distance) continue;
+                    
+                    prev = _cells[x, y];
+                    direction = step.Item4;
                 }
                 path = path.AddStep(prev, direction);
                 cell = prev;
