@@ -164,6 +164,12 @@ Difficulty: Medium
 
 -------------------
 
+#### [A Star Problem](list/AStar)
+
+Difficulty: Hardcore
+
+-------------------
+
 ### Katas from [Dave Thomas](https://pragdave.me/)
 
 #### [Supermarket Pricing Kata](list/SupermarketPricing)
