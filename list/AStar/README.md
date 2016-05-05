@@ -20,9 +20,29 @@ Put another way, A-star traverses a node graph (a collection of points in space 
 
 ![AStar](https://github.com/nspectator/katas/raw/master/list/AStar/AStar.gif)
 
+### Optimization
+
+Hardcore goes here.
+
+With a few more optimizations, we can do even more guesswork and therefore do even fewer calculations. By assigning weights to the nodes visited along the way, we can predict the direction we should try next.
+
+Using some more agressive heuristics, we are able to predict what the most likely best direction to move is and try it first.
+
+![Heuristics](https://github.com/nspectator/katas/raw/master/list/AStar/Heuristic.gif)
+
 ### Goal
 
+Write hardcore optimized A* pathfinder.
+
+* Implement S,N,W,E move directions path finder
+
+* Add diagonal movements and weights
+
 ### Suggested test cases
+
+Hardcore and submit your cases.
+
+![Hardcore](https://github.com/nspectator/katas/raw/master/list/AStar/hardcore.gif)
 
 ### Real world examples
 
