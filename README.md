@@ -152,6 +152,10 @@ Difficulty: Easy
 
 -------------------
 
+#### [Dictionary Replacer Kata](list/DictionaryReplacer)
+
+-------------------
+
 #### [Bank OCR Kata](list/BankOCR)
 
 Difficulty: Medium
