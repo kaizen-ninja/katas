@@ -64,6 +64,12 @@ Difficulty: Hard
 
 -------------------
 
+#### [Equi Kata](list/Equi)
+
+Difficulty: Medium
+
+-------------------
+
 #### [FizzBuzz Kata](list/FizzBuzz)
 
 -------------------
