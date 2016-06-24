@@ -60,6 +60,12 @@ Difficulty: Hard
 
 -------------------
 
+#### [BinaryGap Kata](list/BinaryGap)
+
+Difficulty: Medium
+
+-------------------
+
 #### [Bowling Game Kata](list/BowlingGame)
 
 -------------------
