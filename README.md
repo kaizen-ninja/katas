@@ -70,6 +70,12 @@ Difficulty: Medium
 
 -------------------
 
+#### [Circular primes](list/Circularprimes)
+
+Difficulty: Easy
+
+-------------------
+
 #### [Equi Kata](list/Equi)
 
 Difficulty: Medium
