@@ -1,9 +1,11 @@
 package org.nspectator.katas.circularprimes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 
+import static org.nspectator.katas.utils.StreamUtils.zipWithIndex;
 /**
  * @author rgordeev
  *
@@ -37,69 +39,75 @@ public class CircularPrimes {
     public long solution(int n) {
         return IntStream.rangeClosed(0, n)
                 .boxed()
-                .filter(it -> isPrime(it))
-                .map(it -> rotations(it))
-                .filter(it -> it.stream().allMatch(rotation -> isPrime(rotation)))
+                .filter(isPrime::apply)
+                .map(this::rotations)
+                .filter(rotations -> rotations.stream().allMatch(isPrime::apply))
                 .count();
     }
 
-    protected boolean isPrime(int n) {
-        if (n <= 1) return false;
-        for (int i = 2; i <= n / 2; i++)
-            if (n % i == 0) return false;
+    protected Function<Integer, Boolean> isPrime = (Integer m) -> {
+        if (m <= 1) return false;
+        for (int i = 2; i <= m / 2; i++)
+            if (m % i == 0) return false;
         return true;
-    }
+    };
 
     protected List<Integer> rotations(int n) {
-        Integer[] num = reverse(numberToArray(n));
-        List<Integer> result = new ArrayList<>(num.length);
-        for (int i = 0; i < num.length; i++) {
-            Integer[] rotation = rotate(i, num);
+        List<Integer> num = reverse(numberToArray(n));
+        List<Integer> result = new ArrayList<>(num.size());
+        for (int i = 0; i < num.size(); i++) {
+            List<Integer> rotation = rotate(i, num);
             result.add(arrayToInt(rotation));
         }
         return result;
     }
 
-    protected Integer arrayToInt(Integer[] a) {
-        Integer[] reverse = reverse(a);
-        Integer result = 0;
-        for (int i = 0; i < reverse.length; i++)
-            result += reverse[i] * new Long(Math.round(Math.pow(10, i))).intValue();
-        return result;
+    protected Integer arrayToInt(List<Integer> a) {
+        List<Integer> reverse = reverse(a);
+
+        Map.Entry<Integer, Integer> initial = new AbstractMap.SimpleImmutableEntry<>(0, 0);
+
+        BiFunction<Integer, Integer, Integer> pow = (Integer base, Integer p) ->
+                new Long(Math.round(Math.pow(base, p))).intValue();
+
+        return zipWithIndex(reverse.stream())
+                .reduce(initial, (x, y) ->
+                        new AbstractMap.SimpleImmutableEntry<>(
+                                y.getKey(),
+                                x.getValue() + y.getValue() * pow.apply(10, y.getKey())
+                        ))
+                .getValue();
     }
 
-    protected Integer[] rotate(Integer n, Integer[] a) {
-        int m = a.length;
+    protected List<Integer> rotate(Integer n, List<Integer> a) {
+        int m = a.size();
         n = n % m;
 
         Integer[] result = new Integer[m];
         for (int i = 0; i < m; i++)
-            result[i] = a[(i + m - n) % m];
-        return result;
+            result[i] = a.get((i + m - n) % m);
+        return Arrays.asList(result);
     }
 
-    protected Integer[] numberToArray(int n) {
+    protected List<Integer> numberToArray(Integer n) {
 
-        if (n < 0) throw new IllegalArgumentException("number should be positive");
-
-        if (n <= 9) return new Integer[]{n};
+        Integer m = Math.abs(n);
 
         List<Integer> parts = new ArrayList<>();
-        while (n > 0) {
-            parts.add(n % 10);
-            n = n / 10;
+
+        if (m == 0) parts.add(n);
+
+        while (m > 0) {
+            parts.add(m % 10);
+            m = m / 10;
         }
 
-        return parts.toArray(new Integer[0]);
+        return parts;
     }
 
-    protected Integer[] reverse(Integer[] a) {
-        if (a == null || a.length == 0) return a;
-
-        int m = a.length;
-        Integer[] result = new Integer[m];
-        for (int i = 0; i < m; i++)
-            result[i] = a[m - i - 1];
-        return result;
+    protected List<Integer> reverse(List<Integer> a) {
+        List<Integer> copy = new ArrayList<>(a);
+        Collections.reverse(copy);
+        return copy;
     }
 }
