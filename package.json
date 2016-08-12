@@ -10,6 +10,9 @@
     "mocha": "node_modules/.bin/mocha spec/*.js"
   },
   "author": "NSpectator Team",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "license": "MIT",
   "dependencies": {
     "chai": "3.5.0",

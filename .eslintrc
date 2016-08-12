@@ -52,6 +52,8 @@
     "comma-dangle": 0,
     "arrow-spacing": [2, { "before": false, "after": true }],
     "prefer-template": 0,
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "react/require-extension": 0,
+    "import/extensions": 1
   }
 }
