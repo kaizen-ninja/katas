@@ -14,7 +14,7 @@ class CircularPrimesSpec extends Specification {
     }
 
     def "check number for prime"() {
-        expect: solution.isPrime(n) == f
+        expect: solution.isPrime.apply(n) == f
         where:
         n       |   f
         20      |   false
@@ -33,7 +33,25 @@ class CircularPrimesSpec extends Specification {
         1000    |   false
         1001    |   false
         11      |   true
-    }
+		104677	|	true
+		104681	|	true
+		104683	|	true
+		104693	|	true
+		104701	|	true
+		104707	|	true
+		104711	|	true
+		104717	|	true
+		104723	|	true
+		104729	|	true
+		1024031	|	true
+		1024061	|	true
+		1024073	|	true
+		1024087	|	true
+		1024091	|	true
+		1024099	|	true
+		1024103	|	true
+		1024151	|	true
+	}
 
     def "check number to array mapper"() {
         expect:
@@ -55,10 +73,10 @@ class CircularPrimesSpec extends Specification {
         expect:
             solution.rotate(n, a) == b
         where:
-        n       |       a                               |       b
-        3       |   [1, 2, 3, 4] as Integer[]           |   [2, 3, 4, 1]
-        4       |   [1, 2, 3, 4] as Integer[]           |   [1, 2, 3, 4]
-        2       |   [1, 2, 3, 4] as Integer[]           |   [3, 4, 1, 2]
+        n       |       a                  |       b
+        3       |   [1, 2, 3, 4]           |   [2, 3, 4, 1]
+        4       |   [1, 2, 3, 4]           |   [1, 2, 3, 4]
+        2       |   [1, 2, 3, 4]           |   [3, 4, 1, 2]
     }
 
     def "check reverse work well"() {
@@ -66,11 +84,11 @@ class CircularPrimesSpec extends Specification {
             solution.reverse(a) == b
         where:
         a                       |   b
-        [1] as Integer[]        |   [1]
-        []  as Integer[]        |   []
-        [1,2] as Integer[]      |   [2, 1]
-        [1,2,3,4] as Integer[]  |   [4,3,2,1]
-        [4,3,2] as Integer[]    |   [2,3,4]
+        [1]                     |   [1]
+        []                      |   []
+        [1,2]                   |   [2, 1]
+        [1,2,3,4]               |   [4,3,2,1]
+        [4,3,2]                 |   [2,3,4]
     }
 
     def "check array to int conversion"() {
@@ -78,10 +96,10 @@ class CircularPrimesSpec extends Specification {
             solution.arrayToInt(a) == n
         where:
         a                           |   n
-        [1,2,3,4] as Integer[]      |   1234
-        [1] as Integer[]            |   1
-        [1,2] as Integer[]          |   12
-        [1,4,2,1,0] as Integer[]    |   14210
+        [1,2,3,4]                   |   1234
+        [1]                         |   1
+        [1,2]                       |   12
+        [1,4,2,1,0]                 |   14210
     }
 
     def "check rotations generation"() {
