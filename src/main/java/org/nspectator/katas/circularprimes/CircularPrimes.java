@@ -1,6 +1,7 @@
 package org.nspectator.katas.circularprimes;
 
 import java.util.*;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.IntStream;
 
@@ -64,13 +65,18 @@ public class CircularPrimes {
     protected Integer arrayToInt(List<Integer> a) {
         List<Integer> reverse = reverse(a);
 
-        Map.Entry<Integer, Integer> initial = new AbstractMap.SimpleEntry<>(0, 0);
+        Map.Entry<Integer, Integer> initial = new AbstractMap.SimpleImmutableEntry<>(0, 0);
 
-        return zipWithIndex(reverse.stream()).reduce(initial, (x, y) -> {
-            Map.Entry<Integer, Integer> result = new AbstractMap.SimpleEntry<>(0, 0);
-            result.setValue(x.getValue() + y.getValue() * new Long(Math.round(Math.pow(10, y.getKey()))).intValue());
-            return result;
-        }).getValue();
+        BiFunction<Integer, Integer, Integer> pow = (Integer base, Integer p) ->
+                new Long(Math.round(Math.pow(base, p))).intValue();
+
+        return zipWithIndex(reverse.stream())
+                .reduce(initial, (x, y) ->
+                        new AbstractMap.SimpleImmutableEntry<>(
+                                y.getKey(),
+                                x.getValue() + y.getValue() * pow.apply(10, y.getKey())
+                        ))
+                .getValue();
     }
 
     protected List<Integer> rotate(Integer n, List<Integer> a) {

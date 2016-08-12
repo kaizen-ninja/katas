@@ -36,7 +36,7 @@ public class StreamUtils {
 
 			@Override
 			public Map.Entry<Integer, T> next() {
-				return new AbstractMap.SimpleEntry<>(index++, streamIterator.next());
+				return new AbstractMap.SimpleImmutableEntry<>(index++, streamIterator.next());
 			}
 		});
 	}
