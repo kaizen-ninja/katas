@@ -1,4 +1,4 @@
-#Katas : every day short-time xTDD practice
+# Katas : every day short-time xTDD practice
 
 [![Join the chat at https://gitter.im/nspectator/katas](https://badges.gitter.im/nspectator/katas.svg)](https://gitter.im/nspectator/katas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -27,13 +27,15 @@ There are branches for each technology/language. Currently there are:
 | Branch | Language | Test suite | Build Status |
 | --- | --- | --- | --- |
 | [dotnet/csharp](https://github.com/nspectator/katas/tree/dotnet/csharp) | [C#](http://dotnet.github.io/docs/tutorials/index.html) | [NUnit](http://www.nunit.org/) | [![Build Status](https://ci.appveyor.com/api/projects/status/github/nspectator/katas?branch=dotnet/csharp&svg=true)](https://ci.appveyor.com/project/jonny-novikov/katas/history) |
-| [java/junit](https://github.com/nspectator/katas/tree/dotnet/csharp-nunit) | [java](http://www.oracle.com/technetwork/java/javase/documentation/index.html) | [junit](http://junit.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit) |
+| [java/junit](https://github.com/nspectator/katas/tree/java/junit) | [java](http://www.oracle.com/technetwork/java/javase/documentation/index.html) | [junit](http://junit.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/junit)](https://travis-ci.org/nspectator/katas?branch=java/junit) |
+| [java/spock](https://github.com/nspectator/katas/tree/java/spock) | [java](http://www.oracle.com/technetwork/java/javase/documentation/index.html) | [spock](http://spockframework.github.io/spock/docs/1.0/index.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=java/spock)](https://travis-ci.org/nspectator/katas?branch=java/spock) |
 | [groovy/spock](https://github.com/nspectator/katas/tree/groovy/spock) | [groovy](http://www.groovy-lang.org/) | [spock](http://spockframework.github.io/spock/docs/1.0/index.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=groovy/spock)](https://travis-ci.org/nspectator/katas?branch=groovy/spock) |
 | [js/jasmine](https://github.com/nspectator/katas/tree/js/jasmine) | [javascript](http://www.w3schools.com/js/) | [jasmine](http://jasmine.github.io/) |  [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/jasmine)](https://travis-ci.org/nspectator/katas?branch=js/jasmine) |
 | [js/mocha](https://github.com/nspectator/katas/tree/js/mocha) | [javascript](http://www.w3schools.com/js/) | [mochajs](https://mochajs.org/), [chaijs](http://chaijs.com/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=js/mocha)](https://travis-ci.org/nspectator/katas?branch=js/mocha) |
 | [python/behave](https://github.com/nspectator/katas/tree/python/behave) | [python](https://www.python.org/) | [behave](http://pythonhosted.org/behave/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=python/behave)](https://travis-ci.org/nspectator/katas?branch=python/behave) |
 | [cpp/igloo](https://github.com/nspectator/katas/tree/cpp/igloo) | [C++](http://www.cplusplus.com/) | [igloo](http://igloo-testing.org/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=cpp/igloo)](https://travis-ci.org/nspectator/katas?branch=cpp/igloo) |
 | [ruby/rspec](https://github.com/nspectator/katas/tree/ruby/rspec) | [ruby](https://www.ruby-lang.org) | [rspec](http://rspec.info/) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=ruby/rspec)](https://travis-ci.org/nspectator/katas?branch=ruby/rspec) |
+| [elixir/exunit](https://github.com/nspectator/katas/tree/elixir/exunit) | [Elixir](http://elixir-lang.org) | [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) | [![Build Status](https://api.travis-ci.org/nspectator/katas.svg?branch=elixir/exunit)](https://travis-ci.org/nspectator/katas?branch=elixir/exunit) |
 
 #### Agreements
 
@@ -45,6 +47,12 @@ or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 
 ## List of Katas
 
+#### [Bear And Steady Gene Kata](list/BearAndSteadyGene)
+
+Difficulty: Hard
+
+-------------------
+
 #### [String Sum Kata](list/StringSum)
 
 -------------------
@@ -53,7 +61,25 @@ or [AppVeyor](https://ci.appveyor.com/project/jonny-novikov/katas)
 
 -------------------
 
+#### [BinaryGap Kata](list/BinaryGap)
+
+Difficulty: Medium
+
+-------------------
+
 #### [Bowling Game Kata](list/BowlingGame)
+
+-------------------
+
+#### [Circular primes](list/Circularprimes)
+
+Difficulty: Easy
+
+-------------------
+
+#### [Equi Kata](list/Equi)
+
+Difficulty: Medium
 
 -------------------
 
@@ -186,7 +212,7 @@ Difficulty: Hardcore
 * Want to share your solution?
     * Fork repository
     * Checkout specific branch, e.g. [java/junit](https://github.com/nspectator/katas/tree/java/junit)
-    * Create your branch <em>{kata-name}-{feature-name}</em>
+    * Create your branch *{kata-name}-{feature-name}*
     * Follow code guidance, add src for new kata or more tests for existing
     * Make PR to branch you have checkout (not master)
 
