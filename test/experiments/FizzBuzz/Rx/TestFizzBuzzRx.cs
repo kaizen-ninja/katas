@@ -14,23 +14,23 @@ namespace Katas.TheFizzBuzzKata.Rx
             Assert.That(result, Is.Empty);
         }
 
-        [TestCase(1, Result = "1,")]
-        [TestCase(2, Result = "1,2,")]
+        [TestCase(1, ExpectedResult = "1,")]
+        [TestCase(2, ExpectedResult = "1,2,")]
         public string GivenNumberUpTo2_ReturnNumbersCommaDelimited(int input)
         {
             return FizzBuzzRx.Generate(input);
         }
 
-        [TestCase(3, Result = "1,2,Fizz,")]
-        [TestCase(6, Result = "1,2,Fizz,4,Buzz,Fizz,")]
-        [TestCase(9, Result = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,")]
+        [TestCase(3, ExpectedResult = "1,2,Fizz,")]
+        [TestCase(6, ExpectedResult = "1,2,Fizz,4,Buzz,Fizz,")]
+        [TestCase(9, ExpectedResult = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,")]
         public string GivenNumberDividedBy_ReturnFizzInstead(int input)
         {
             return FizzBuzzRx.Generate(input);
         }
 
-        [TestCase(5, Result = "1,2,Fizz,4,Buzz,")]
-        [TestCase(10, Result = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,")]
+        [TestCase(5, ExpectedResult = "1,2,Fizz,4,Buzz,")]
+        [TestCase(10, ExpectedResult = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,")]
         public string GivenNumberDividedBy5_ReturnBuzzInstead(int input)
         {
             return FizzBuzzRx.Generate(input);
