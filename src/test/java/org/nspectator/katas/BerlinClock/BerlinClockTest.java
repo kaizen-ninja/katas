@@ -1,4 +1,4 @@
-package org.nspectator.katas;
+package org.nspectator.katas.BerlinClock;
 
 import org.junit.Assert;
 import org.junit.Test;
