@@ -1,11 +1,15 @@
-package org.nspectator.katas.BerlinClock;
+package Main;
 
+import Main.BerlinClock;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Created by v-kru on 31.10.2016.
+ */
 public class BerlinClockTest {
 
-    private BerlinClock berlinClock = new BerlinClock();
+    BerlinClock berlinClock = new BerlinClock();
 
     // Yellow lamp should blink on/off every two seconds
     @Test
@@ -25,9 +29,9 @@ public class BerlinClockTest {
     @Test
     public void testTopHoursShouldLightRedLampForEvery5Hours() {
         Assert.assertEquals("OOOO", berlinClock.getTopHours(0));
-        Assert.assertEquals("RROO", berlinClock.getTopHours(13));
-        Assert.assertEquals("RRRR", berlinClock.getTopHours(23));
-        Assert.assertEquals("RRRR", berlinClock.getTopHours(24));
+        Assert.assertEquals("RROO", berlinClock.getTopHours(10));
+        Assert.assertEquals("RRRR", berlinClock.getTopHours(22));
+        Assert.assertEquals("RRRO", berlinClock.getTopHours(18));
     }
 
     // Bottom hours should have 4 lamps
@@ -40,9 +44,10 @@ public class BerlinClockTest {
     @Test
     public void testBottomHoursShouldLightRedLampForEveryHourLeftFromTopHours() {
         Assert.assertEquals("OOOO", berlinClock.getBottomHours(0));
-        Assert.assertEquals("RRRO", berlinClock.getBottomHours(13));
-        Assert.assertEquals("RRRO", berlinClock.getBottomHours(23));
+        Assert.assertEquals("RRRO", berlinClock.getBottomHours(03));
+        Assert.assertEquals("RROO", berlinClock.getBottomHours(22));
         Assert.assertEquals("RRRR", berlinClock.getBottomHours(24));
+        Assert.assertEquals("ROOO", berlinClock.getBottomHours(11));
     }
 
     // Top minutes should have 11 lamps
@@ -65,7 +70,8 @@ public class BerlinClockTest {
     public void testTopMinutesShouldLightYellowLampForEvery5MinutesUnlessItIsFirstQuarterHalfOrLastQuarter() {
         Assert.assertEquals("OOOOOOOOOOO", berlinClock.getTopMinutes(0));
         Assert.assertEquals("YYROOOOOOOO", berlinClock.getTopMinutes(17));
-        Assert.assertEquals("YYRYYRYYRYY", berlinClock.getTopMinutes(59));
+        Assert.assertEquals("YYRYYOOOOOO", berlinClock.getTopMinutes(27));
+        Assert.assertEquals("YYRYYRYYRYY", berlinClock.getTopMinutes(56));
     }
 
     // Bottom minutes should have 4 lamps
@@ -84,7 +90,7 @@ public class BerlinClockTest {
 
     // Berlin Clock should result in array with 5 elements
     @Test
-    public void testBerlinClockShouldResultInArrayWith5Elements() {
+    public void testBerlinClockShouldResultInArrayWith5Elements()  {
         Assert.assertEquals(5, berlinClock.convertToBerlinTime("13:17:01").length);
     }
 
@@ -92,7 +98,7 @@ public class BerlinClockTest {
     @Test
     public void testBerlinClockShouldResultInCorrectSecondsHoursAndMinutes() {
         String[] berlinTime = berlinClock.convertToBerlinTime("16:37:16");
-        String[] expected = new String[]{"Y", "RRRO", "ROOO", "YYRYYRYOOOO", "YYOO"};
+        String[] expected = new String[] {"Y", "RRRO", "ROOO", "YYRYYRYOOOO", "YYOO"};
         Assert.assertEquals(expected.length, berlinTime.length);
         for (int index = 0; index < expected.length; index++) {
             Assert.assertEquals(expected[index], berlinTime[index]);
