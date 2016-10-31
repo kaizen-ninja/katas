@@ -1,8 +1,5 @@
-package com.technologyconversations.learning.kata.solutions.tennisgame;
+package org.nspectator.katas.tennisgame;
 
-/**
- * Created by WhatNick on 10/31/2016.
- */
 class GameTennis {
     private PlayerTennis player1;
     private PlayerTennis player2;

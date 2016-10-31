@@ -1,11 +1,7 @@
-package com.technologyconversations.learning.kata.solutions.tennisgame;
+package org.nspectator.katas.tennisgame;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by WhatNick on 10/31/2016.
- */
 
 class PlayerTennis {
     private String name;

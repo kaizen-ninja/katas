@@ -1,4 +1,4 @@
-package com.technologyconversations.learning.kata.solutions.tennisgame;
+package org.nspectator.katas.tennisgame;
 
 import org.junit.Before;
 import org.junit.Test;
