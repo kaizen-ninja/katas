@@ -1,12 +1,10 @@
-package Main;
+package org.nspectator.katas.BerlinClock;
 
-import Main.BerlinClock;
-import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Created by v-kru on 31.10.2016.
- */
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.*;
 public class BerlinClockTest {
 
     BerlinClock berlinClock = new BerlinClock();

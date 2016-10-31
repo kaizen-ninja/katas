@@ -1,4 +1,4 @@
-package Main;
+package org.nspectator.katas.BerlinClock;
 
 import java.util.ArrayList;
 import java.util.List;
