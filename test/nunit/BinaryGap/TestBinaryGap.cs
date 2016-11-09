@@ -9,7 +9,7 @@ namespace Katas.BinaryGap
 {
     [TestFixture]
     [Category("BinaryGapKata")]
-    class BinaryGapTest
+    class TestBinaryGap
     {
         Dictionary<int, int> testTable;
 
