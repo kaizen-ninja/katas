@@ -1,5 +1,5 @@
 package org.nspectator.katas.BerlinClock;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
