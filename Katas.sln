@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "katas", "katas", "{D86EA90F-C32E-4371-87B1-300AE73363C8}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console", "console", "{7724FB47-346F-45DE-8C5B-12D947EF7DF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas.Labyrinth.ConsoleApp", "test\console\Katas.Labyrinth.Console\Katas.Labyrinth.ConsoleApp.csproj", "{2F564155-4B50-4343-8D7F-939B86D66AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas.Equi", "Katas.Equi\Katas.Equi.csproj", "{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{4FE824C2-B2D4-4D0C-8F75-E595A3F002B7} = {D86EA90F-C32E-4371-87B1-300AE73363C8}
 		{C8CD4CC6-A6B5-4DCB-A5FB-5B527A341238} = {D86EA90F-C32E-4371-87B1-300AE73363C8}
 		{2F564155-4B50-4343-8D7F-939B86D66AE4} = {7724FB47-346F-45DE-8C5B-12D947EF7DF4}
+		{9CCBA79A-05CC-48EF-8F58-30CA5B50E5C6} = {D86EA90F-C32E-4371-87B1-300AE73363C8}
 	EndGlobalSection
 EndGlobal
