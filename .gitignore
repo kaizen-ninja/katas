@@ -22,3 +22,22 @@ node_modules/
 
 .DS_Store
 Thumbs.db
+
+# Python-specific
+*.egg-info
+*.pyc
+*.pyo
+.DS_Store
+.coverage
+.bzrignore
+.bzr/
+.idea/
+.tox/
+__pycache__/
+_/
+_WORKSPACE/
+build/
+dist/
+downloads/
+test_results/
+tmp/

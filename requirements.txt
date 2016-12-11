@@ -1,0 +1,30 @@
+# ============================================================================
+# PYTHON PACKAGE REQUIREMENTS:
+# ============================================================================
+# REQUIRES: Python >= 2.6
+# DESCRIPTION:
+#    pip install -r <THIS_FILE>
+#
+# SPECIFIC DEPENDENCIES:
+#   behave  -- BDD test framework, cucumber-clone for Python.
+#   paver   -- Development and build support (optional)
+#   pyhamcrest -- As assertations matcher library.
+#
+# MAYBE:
+#   nose:       for assertations: eq_(x, y)
+#   pytest:     for assertations
+#
+# TODO: pysite added only for 2.7
+# ============================================================================
+pysite
+
+behave >= 1.2.5
+parse >= 1.6.3
+parse_type >= 0.3.4
+
+argparse
+PyHamcrest >= 1.8
+
+# -- BUILD-SUPPORT:
+Paver >= 1.2
+watchdog >= 0.6.0
