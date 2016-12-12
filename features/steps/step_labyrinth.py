@@ -5,7 +5,7 @@ from labyrinth import Labyrinth
 
 @given('Create an instance of Labyrinth n:"{n}" array: "{array}"')
 def step(context, n, array):
-    context.labi = Labyrinth(n, str.split(array))
+    context.labi = Labyrinth(n, array.split())
 
 
 @then('S-Position = "{position1}", E-Position = "{position2}"')
@@ -20,7 +20,7 @@ def step_impl(context, x, y,result):
 
 @then('Path from s to e: "{path}"')
 def step_impl(context, path):
-    assert_that(context.labi.start(), equal_to(str.split(path,sep=',')))
+    assert_that(context.labi.start(), equal_to(path.split(',')))
 
 
 def toIntArray(strArray):

@@ -22,8 +22,8 @@ def step(context,gene,cortege):
 def step_impl(context, first, second, boolka):
     assert_that(
         str(context.solution.contains_cortege(
-        toIntArray(str.split(first, sep=',')),
-        toIntArray(str.split(second, sep=',')))),
+        toIntArray(first.split(',')),
+        toIntArray(second.split(',')))),
         equal_to(boolka))
 
 

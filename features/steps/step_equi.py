@@ -5,7 +5,7 @@ from equi import Equi
 
 @given('Create an instance of Equi array: "{array}"')
 def step(context, array):
-    context.eq = Equi(str.split(array, sep=','), 4)
+    context.eq = Equi(array.split(','), 4)
 
 
 @then('Element "{number}" Is Equilibrium. It`s "{result}"')

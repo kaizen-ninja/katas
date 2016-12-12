@@ -9,12 +9,12 @@ def step(context, n):
 
 
 @then('"{n}" to binary : "{result}"')
-def step_impl(context,n,result):
+def step_impl(context, n, result):
     assert_that(context.gap.convert_to_binary(n), result)
 
 
 @then('Max Gap of this number :: "{result}"')
-def step_impl(context,result):
+def step_impl(context, result):
     assert_that(context.gap.get_binary_gap(), equal_to(int(result)))
 
 
