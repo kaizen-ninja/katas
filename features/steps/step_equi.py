@@ -15,7 +15,7 @@ def step_impl(context,number,result):
 
 @then('All Equilibrium Indexes is: "{result}"')
 def step_impl(context,result):
-    assert_that(context.eq.get_equilibrium_indexes(), equal_to(toIntArray(str.split(result, sep=','))))
+    assert_that(context.eq.get_equilibrium_indexes(), equal_to(toIntArray(result.split(','))))
 
 
 def toIntArray(strArray):
