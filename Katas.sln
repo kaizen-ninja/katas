@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console", "console", "{7724
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas.Labyrinth.ConsoleApp", "test\console\Katas.Labyrinth.Console\Katas.Labyrinth.ConsoleApp.csproj", "{2F564155-4B50-4343-8D7F-939B86D66AE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{2021F3CC-5E33-42A3-823A-63D175C71A94}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F564155-4B50-4343-8D7F-939B86D66AE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2021F3CC-5E33-42A3-823A-63D175C71A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2021F3CC-5E33-42A3-823A-63D175C71A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2021F3CC-5E33-42A3-823A-63D175C71A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2021F3CC-5E33-42A3-823A-63D175C71A94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
