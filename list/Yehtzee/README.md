@@ -120,6 +120,8 @@ When placed on "large straight", if the dice read
 If the dice are two of a kind and three of a kind, the
 player scores the sum of all the dice.
 For example, when placed on "full house"
+
 		1,1,2,2,2 scores 8 (1+1+2+2+2)
 		2,2,3,3,4 scores 0
 		4,4,4,4,4 scores 0
+
