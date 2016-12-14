@@ -6,16 +6,10 @@ sourceCompatibility = 1.8
 
 repositories {
     jcenter()
-    mavenCentral()
 }
 
 dependencies {
-    testCompile(
-            'junit:junit:4.12',
-            'org.codehaus.groovy:groovy-all:2.4.4',
-            'org.spockframework:spock-core:1.1-groovy-2.4-rc-2'
-    )
-    //testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
     testCompile( 'com.athaydes:spock-reports:1.2.12' ) {
         transitive = false // this avoids affecting version of Groovy/Spock
     }

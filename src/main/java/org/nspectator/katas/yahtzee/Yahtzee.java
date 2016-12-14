@@ -130,15 +130,14 @@ package org.nspectator.katas.yahtzee;
  */
 public class Yahtzee {
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5}; //пример значений пяти кубиков
-        int cat = 1; //категория, по которой необходимо вычислить счёт
+        int[] arr = new int[]{1,2,3,4,5}; //example roll values
+        int cat = 1; //chosen scoring category
         System.out.println(solution(arr,cat));
     }
 
     public static int solution(int[] arr, int cat){
-        int score=0; //счёт
-        int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0; //количество 1,2,3,4,5,6
-        //находим их количество
+        int score=0; //score
+        int c1=0,c2=0,c3=0,c4=0,c5=0,c6=0; //number of 1,2,3,4,5,6
         for(int i=0;i<arr.length;i++){
             if(arr[i]==1)
                 c1++;
@@ -153,7 +152,7 @@ public class Yahtzee {
             if(arr[i]==6)
                 c6++;
         }
-        //в зависимости от выбранной категории, вычисляем счёт
+        //evaluating the score based on chosen category
         switch (cat){
             case 1: //chance
                 score=(1*c1)+(2*c2)+(3*c3)+(4*c4)+(5*c5)+(6*c6);

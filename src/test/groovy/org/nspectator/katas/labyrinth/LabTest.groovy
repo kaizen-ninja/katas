@@ -8,7 +8,7 @@ import spock.lang.Specification
  */
 class LabTest extends Specification{
 
-    //тест поиска выхода из лабиринта и вывод последовательности шагов
+    //labyrinth path test
     def "testLab"(){
         given:
             def lab = new Lab()

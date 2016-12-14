@@ -8,7 +8,7 @@ import spock.lang.Specification
  */
 class EqTest extends Specification{
 
-    //тест вычисления точек равновесия
+    //equilibrium points test
     def "testSol"(){
         given:
             def eq = new Eq()

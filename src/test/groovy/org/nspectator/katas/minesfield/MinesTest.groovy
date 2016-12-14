@@ -8,7 +8,7 @@ import spock.lang.Specification
  */
 class MinesTest extends Specification{
 
-    //тест преобразования подсказок в минное поле
+    //minefield test
     def "testMines"(){
         given:
             def mines = new Mines()

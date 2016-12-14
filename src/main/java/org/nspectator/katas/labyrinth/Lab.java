@@ -30,11 +30,11 @@ import java.util.Random;
  */
 public class Lab {
 
-    public static String s = "s"; //символ для обозначения входа
-    public static String e = "e"; //символ для обозначения выхода
-    public static String p = "+"; //символ для обозначения пути
-    public static String t = "-"; //символ для обозначения верного пути
-    public static String w = "*"; ////символ для обозначения стены
+    public static String s = "s"; //start char
+    public static String e = "e"; //exit char
+    public static String p = "+"; //path char
+    public static String t = "-"; //correct path char
+    public static String w = "*"; //wall char
 
     public static void main(String[] args) {
         String[][] lab = new String[][]{
@@ -43,9 +43,9 @@ public class Lab {
                 {w,w,p,p,p,p},
                 {w,w,p,w,w,w},
                 {w,w,p,w,w,w},
-                {p,p,p,p,p,e}}; //лабиринт
+                {p,p,p,p,p,e}}; //example labyrinth
 
-        String buf=solution(lab); //вычисляем последователость
+        String buf=solution(lab); //finding the path to the exit
         for (int i = 0; i < lab.length; i++) {
             for (int j = 0; j < lab[0].length; j++)
                 System.out.print(lab[i][j]+" ");
@@ -56,28 +56,28 @@ public class Lab {
     }
 
     public static String solution(String[][] lab){
-        List<String> path = new ArrayList<String>(); //последовательность шагов
-        int sx=0,sy=0,ex=0,ey=0; //координаты входа и выхода
+        List<String> path = new ArrayList<String>();
+        int sx=0,sy=0,ex=0,ey=0; //start and exit coordinates
         for(int i=0;i<lab.length;i++){
             for(int j=0;j<lab[0].length;j++){
-                if(lab[i][j].equals(s)){ //если нашли вход, сохраняем координаты
+                if(lab[i][j].equals(s)){
                     sx=i;
                     sy=j;
                 }
-                if(lab[i][j].equals(e)){ //если нашли выход, сохраняем координаты
+                if(lab[i][j].equals(e)){
                     ex=i;
                     ey=j;
                 }
             }
         }
-        String res=""; //для хранения последовательности шагов в строковом формате
-        if(canSolve(sx,sy,ex,ey,path,lab)){ //если найден путь
+        String res=""; //final correct path string
+        if(canSolve(sx,sy,ex,ey,path,lab)){ //if correct path exists
             for (String str: path) {
                 res+=str+" ";
             }
             return res.substring(0,res.length()-1);
         }
-        return "NO SOLUTION"; //если не найден путь
+        return "NO SOLUTION"; //if path not found
     }
 
     public static boolean canSolve(int sx, int sy, int ex, int ey, List<String> path, String[][] lab){
@@ -85,31 +85,31 @@ public class Lab {
                 (sx==ex && sy==ey+1) ||
                 (sx==ex-1 && sy==ey) ||
                 (sx==ex+1 && sy==ey))
-            return true; //если выход находится рядом со входом, то путь уже найден
+            return true; //if exit is near the start then the path is already exists
         if(sx+1<lab.length && lab[sx+1][sy].equals(p)){
             lab[sx+1][sy]=t;
-            path.add("D"); //двигаемся вниз
+            path.add("D"); //moving down
             if(canSolve(sx+1,sy,ex,ey,path, lab))
                 return true;
             lab[sx+1][sy]=" ";
         }
         if(sx-1>=0 && lab[sx-1][sy].equals(p)){
             lab[sx-1][sy]=t;
-            path.add("U"); //двигаемся вверх
+            path.add("U"); //moving up
             if(canSolve(sx-1,sy,ex,ey,path, lab))
                 return true;
             lab[sx-1][sy]=" ";
         }
         if(sy+1<lab[0].length &&lab[sx][sy+1].equals(p)){
             lab[sx][sy+1]=t;
-            path.add("R"); //двигаемся вправо
+            path.add("R"); //moving right
             if(canSolve(sx,sy+1,ex,ey,path, lab))
                 return true;
             lab[sx][sy+1]=" ";
         }
         if(sy-1>=0 && lab[sx][sy-1].equals(p)){
             lab[sx][sy-1]=t;
-            path.add("L"); //двигаемся влево
+            path.add("L"); //moving left
             if(canSolve(sx,sy-1,ex,ey,path, lab))
                 return true;
             lab[sx][sy-1]=" ";

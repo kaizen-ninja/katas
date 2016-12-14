@@ -31,16 +31,16 @@ import java.util.Random;
  */
 public class Mines {
 
-    public static String f = " "; //нет мины
-    public static String t = "*"; //есть мина
+    public static String f = " "; //no mine
+    public static String t = "*"; //mine
 
     public static void main(String[] args) {
-        int n = 3; //количество строк
-        int m = 4; //количество столбцов
-        int k = m/2; //количество мин
-        String[][] mfield = new String[n][m]; //минное поле
-        int[][] tipField = genField(mfield, k); //генерируем поле, для вычисления подсказок
-        String[][] mineField = solution(tipField); //финальное поле с подсказками и минами
+        int n = 3; //number of rows
+        int m = 4; //number of columns
+        int k = m/2; //number of mines
+        String[][] mfield = new String[n][m]; //mine field
+        int[][] tipField = genField(mfield, k); //generating tips field
+        String[][] mineField = solution(tipField); //final field with tips and mines
         for(int i=0;i<n;i++) {
             for (int j = 0; j < m; j++) {
                 System.out.print(mineField[i][j]+" ");
@@ -49,12 +49,11 @@ public class Mines {
         }
     }
 
-    //генерация поля для вычисления подсказок
+    //tips field generation
     public static int[][] genField(String[][] field, int k) {
         int n=field.length;
         int m=field[0].length;
         int[][] intF = new int[n][m];
-        //создаем пустое поле
         for(int i=0; i<n;i++){
             for(int j=0;j<m;j++){
                 field[i][j]=f;
@@ -62,7 +61,7 @@ public class Mines {
         }
         Random rnd = new Random();
         int u, i;
-        //раскидваем мины
+        //placing mines
         while(k>0){
             u = rnd.nextInt(n);
             i = rnd.nextInt(m);
@@ -77,7 +76,7 @@ public class Mines {
         int n=field.length;
         int m=field[0].length;
         String[][] res = new String[field.length][field[0].length];
-        //если на точке находится мина, ставим +1 вокруг неё
+        //if the point has a mine, that surround the mine with +1 tip
         for(int i=0; i<n;i++){
             for(int j=0;j<m;j++){
                 if(field[i][j]==-1){
@@ -100,7 +99,7 @@ public class Mines {
                 }
             }
         }
-        //помечаем результативное минное поле подсказками и минами
+        //final mine field with tips and mines
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(field[i][j]!=-1)

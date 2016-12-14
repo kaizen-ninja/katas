@@ -80,15 +80,15 @@ import java.util.List;
 public class Eq {
 
     public static void main(String[] args) {
-        int[] a = new int[]{-1,3,-4,5,1,-6,2,1}; //числовая последовательность пример
+        int[] a = new int[]{-1,3,-4,5,1,-6,2,1}; //example set of numbers
         System.out.println(solution(a, a.length));
     }
 
     public static String solution(int[] A, int N) {
-        String equi = ""; //переменная, в которой будет хранится результат
+        String equi = ""; //points of equilibrium are stored here
 
-        int low = 0; //сумма слева
-        int up = 0; //сумма справа
+        int low = 0; //sum on the left
+        int up = 0; //sum on the right
         for(int i : A)
         up += i;
         for (int i = 0; i < N; i++)
@@ -96,12 +96,12 @@ public class Eq {
             up -= A[i];
             if (up == low)
             {
-                equi+=i+","; //точка равновесия найдена, добавляем её в результат
+                equi+=i+","; //point of equilibrium is found
             }
             low += A[i];
         }
         if(equi.length()<2)
-            return  "-1"; //если нет точек равновесия, то возвращаем стандартное значение ошибки
-        return equi.substring(0,equi.length()-1); //в противном случае показываем все точки равновесия
+            return  "-1"; //if there is not points, then return "no solution" indication
+        return equi.substring(0,equi.length()-1); //otherwise return all found points
     }
 }

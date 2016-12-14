@@ -46,9 +46,7 @@ echo location of your Java installation.
 goto fail
 
 :init
-
 @rem Get command-line arguments, handling Windows variants
-
 
 if not "%OS%" == "Windows_NT" goto win9xME_args
 if "%@eval[2+2]" == "4" goto 4NT_args

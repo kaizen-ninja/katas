@@ -9,7 +9,7 @@ import spock.lang.Specification
 
 class YahtzeeTest extends Specification{
 
-    //тест вычисления категории Chance
+    //test for Chance category
     def "testChance"(){
         given:
             def yahtzee = new Yahtzee()
@@ -22,7 +22,7 @@ class YahtzeeTest extends Specification{
             [2,2,2,2,2]    |       10
     }
 
-    //тест вычисления категории Yahtzee
+    //test for Yahtzee category
     def "testYahtzee"(){
         given:
             def yahtzee = new Yahtzee()
@@ -35,7 +35,7 @@ class YahtzeeTest extends Specification{
             [3,3,3,3,1]    |       0
     }
 
-    //тест вычисления категории Ones
+    //test for Ones category
     def "testOnes"() {
         given:
             def yahtzee = new Yahtzee()
@@ -48,7 +48,7 @@ class YahtzeeTest extends Specification{
             [4,3,2,3,5]    |       0
     }
 
-    //тест вычисления категории Twos
+    //test for Twos category
     def "testTwos"(){
         given:
             def yahtzee = new Yahtzee()
@@ -61,7 +61,7 @@ class YahtzeeTest extends Specification{
             [1,3,4,3,5]    |       0
     }
 
-    //тест вычисления категории Threes
+    //test for Threes category
     def "testThrees"(){
         given:
             def yahtzee = new Yahtzee()
@@ -74,7 +74,7 @@ class YahtzeeTest extends Specification{
             [1,2,2,4,5]    |       0
     }
 
-    //тест вычисления категории Fours
+    //test for Fours category
     def "testFours"(){
         given:
             def yahtzee = new Yahtzee()
@@ -87,7 +87,7 @@ class YahtzeeTest extends Specification{
             [1,3,2,3,5]    |       0
     }
 
-    //тест вычисления категории Fives
+    //test for Fives category
     def "testFives"(){
         given:
             def yahtzee = new Yahtzee()
@@ -100,7 +100,7 @@ class YahtzeeTest extends Specification{
             [1,2,2,3,4]    |       0
     }
 
-    //тест вычисления категории Sixes
+    //test Sixes category
     def "testSixes"(){
         given:
             def yahtzee = new Yahtzee()
@@ -113,7 +113,7 @@ class YahtzeeTest extends Specification{
             [1,2,3,4,5]    |       0
     }
 
-    //тест вычисления категории Pair
+    //test for Pair category
     def "testPair"(){
         given:
             def yahtzee = new Yahtzee()
@@ -126,7 +126,7 @@ class YahtzeeTest extends Specification{
             [1,2,3,4,5]    |       0
     }
 
-    //тест вычисления категории Two Pair
+    //test for Two Pair category
     def "testTwoPair"(){
         given:
             def yahtzee = new Yahtzee()
@@ -139,7 +139,7 @@ class YahtzeeTest extends Specification{
             [1,2,3,4,5]    |       0
     }
 
-    //тест вычисления категории Three of a kind
+    //test for Three of a kind category
     def "testThreeOfKind"(){
         given:
             def yahtzee = new Yahtzee()
@@ -152,7 +152,7 @@ class YahtzeeTest extends Specification{
             [1,2,2,3,4]    |       0
     }
 
-    //тест вычисления категории Four of a kind
+    //test for Four of a kind category
     def "testFourKind"(){
         given:
             def yahtzee = new Yahtzee()
@@ -165,7 +165,7 @@ class YahtzeeTest extends Specification{
             [1,2,2,3,4]    |       0
     }
 
-    //тест вычисления категории Small Straight
+    //test for Small Straight category
     def "testSStraight"(){
         given:
             def yahtzee = new Yahtzee()
@@ -178,7 +178,7 @@ class YahtzeeTest extends Specification{
             [1,2,3,4,5]    |       15
     }
 
-    //тест вычисления категории Large Straight
+    //test for Large Straight category
     def "testLStraight"(){
         given:
             def yahtzee = new Yahtzee()
@@ -191,7 +191,7 @@ class YahtzeeTest extends Specification{
             [2,3,4,5,6]    |       20
     }
 
-    //тест вычисления категории Full House
+    //test for Full House category
     def "testFullHouse"(){
         given:
             def yahtzee = new Yahtzee()
