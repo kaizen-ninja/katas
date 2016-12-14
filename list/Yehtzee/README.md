@@ -123,4 +123,4 @@ For example, when placed on "full house"
 
 		1,1,2,2,2 scores 8 (1+1+2+2+2)
 		2,2,3,3,4 scores 0
-		4,4,4,4,4 scores 0 
+		4,4,4,4,4 scores 0
