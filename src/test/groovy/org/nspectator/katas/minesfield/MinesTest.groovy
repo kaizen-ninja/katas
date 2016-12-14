@@ -1,3 +1,6 @@
+package org.nspectator.katas.minesfield
+
+import org.nspectator.katas.minesfield.Mines
 import spock.lang.Specification
 
 /**
@@ -5,6 +8,7 @@ import spock.lang.Specification
  */
 class MinesTest extends Specification{
 
+    //тест преобразования подсказок в минное поле
     def "testMines"(){
         given:
             def mines = new Mines()

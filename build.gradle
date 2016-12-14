@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-apply plugin: 'groovy'
 apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
@@ -15,20 +15,7 @@ dependencies {
             'org.codehaus.groovy:groovy-all:2.4.4',
             'org.spockframework:spock-core:1.1-groovy-2.4-rc-2'
     )
-}
-=======
-apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'jacoco'
-
-sourceCompatibility = 1.8
-
-repositories {
-    jcenter()
-}
-
-dependencies {
-    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+    //testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
     testCompile( 'com.athaydes:spock-reports:1.2.12' ) {
         transitive = false // this avoids affecting version of Groovy/Spock
     }
@@ -42,4 +29,3 @@ jacocoTestReport {
         html.enabled = true
     }
 }
->>>>>>> 9924268f2366e8c0f35521cf91ab993bd4f35979

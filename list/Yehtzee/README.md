@@ -44,7 +44,7 @@ For example,
 	   1,1,3,3,6 placed on "chance" scores 14 (1+1+3+3+6)
 	   4,5,5,6,1 placed on "chance" scores 21 (4+5+5+6+1)
 
-#####Yahtzee:
+#####org.nspectator.katas.yahtzee.Yahtzee:
 
 If all dice have the same number, the player scores 50 points.
 	  For example,

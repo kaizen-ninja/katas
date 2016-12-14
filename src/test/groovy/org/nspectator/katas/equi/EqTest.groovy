@@ -1,3 +1,6 @@
+package org.nspectator.katas.equi
+
+import org.nspectator.katas.equi.Eq
 import spock.lang.Specification
 
 /**
@@ -5,11 +8,12 @@ import spock.lang.Specification
  */
 class EqTest extends Specification{
 
+    //тест вычисления точек равновесия
     def "testSol"(){
         given:
             def eq = new Eq()
         expect:
-            eq.solution(a as int[],a.size())==n
+            eq.solution(a as int[],a.size()).equals(n)
         where:
             a                      |       n
             [-1,3,-4,5,1,-6,2,1]   |       "1,3,7"
