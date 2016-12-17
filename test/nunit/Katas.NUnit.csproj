@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="BinaryGap\BinaryGap.cs" />
     <Compile Include="BinaryGap\TestBinaryGap.cs" />
+    <Compile Include="Equi\Equi.cs" />
+    <Compile Include="Equi\TestEqui.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
