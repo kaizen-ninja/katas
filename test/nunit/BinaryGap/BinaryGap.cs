@@ -6,34 +6,38 @@ using System.Threading.Tasks;
 
 namespace Katas.BinaryGap
 {
-    static class BinaryGap
+    public class BinaryGap
     {
-        const int TwoPowerOfIntMax = 32;
-
-        public static int GetGapSize(int number)
+       public string ToBinary(int n)
         {
-            bool started = false;
-            int maxGapLenght = 0;
-            int currentGapLength = 0;
 
-            for (int caret = 0; caret < TwoPowerOfIntMax; caret++)
+           return Convert.ToString(n, 2);
+        } 
+        public int Solution(int n)
+        {
+            var binary = ToBinary(n);
+            List<int> lens = new List<int>();
+            char prev = '0';
+            for (int i = 0; i < binary.Length; i++)
             {
-                int mask = 1 << caret;
-                if ((number & mask) == mask)
+                if (binary[i] == '0' && prev == '1')
                 {
-                    if (started)
-                    {
-                        maxGapLenght = Math.Max(maxGapLenght, currentGapLength);
-                        currentGapLength = 0;
-                    }
-                    else started = true;
+                    var count = FindEndOfGap(binary.Substring(i));
+                    i += count;
+                    lens.Add(count);
                 }
-                else if (started)
-                {
-                    currentGapLength++;
-                }
+                prev = binary[i];
             }
-            return maxGapLenght;
+            return lens.Max();
+        }
+
+        public int FindEndOfGap(string str)
+        {
+            int i = 0;
+            do i++;
+            while (str[i] != '1');
+
+            return i;
         }
     }
 }
