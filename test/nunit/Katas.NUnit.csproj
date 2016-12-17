@@ -53,15 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryGap\BinaryGap.cs" />
-    <Compile Include="BinaryGap\TestBinaryGap.cs" />
+    <Compile Include="BinaryGap\BinaryGapTests.cs" />
+    <Compile Include="CalcStats\CalcStats.cs" />
+    <Compile Include="CalcStats\CalcStatsTests.cs" />
+    <Compile Include="CircularPrimes\CircularPrimes.cs" />
+    <Compile Include="CircularPrimes\CircularPrimesTests.cs" />
+    <Compile Include="Equi\Equi.cs" />
+    <Compile Include="Equi\EquiTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\..\src\CalcStats\CalcStat.cs">
-      <Link>CalcStats\CalcStat.cs</Link>
-    </Compile>
-    <Compile Include="CalcStats\CalcStatTest.cs" />
     <Compile Include="..\..\src\Diversion\Diversion.cs">
       <Link>Diversion\Diversion.cs</Link>
     </Compile>
@@ -104,8 +106,8 @@
     <Compile Include="..\..\src\StringCalculator\Calculator.cs">
       <Link>StringCalculator\Calculator.cs</Link>
     </Compile>
-    <Compile Include="ReversePolishNotation\TestReversePolishNotation.cs" />
     <Compile Include="ReversePolishNotation\ReversePolishNotation.cs" />
+    <Compile Include="ReversePolishNotation\ReversePolishNotationTests.cs" />
     <Compile Include="StringCalculator\TestCalculator.cs" />
     <Compile Include="..\..\src\StringSum\StringSumKata.cs">
       <Link>StringSum\StringSumKata.cs</Link>
@@ -125,6 +127,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
