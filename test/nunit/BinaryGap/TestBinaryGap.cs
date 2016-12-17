@@ -12,6 +12,7 @@ namespace Katas.BinaryGap
     class TestBinaryGap
     {
         Dictionary<int, int> testTable;
+        BinaryGap binarygap = new BinaryGap(1);
 
         [SetUp]
         public void InitializeTestTable()
@@ -21,16 +22,26 @@ namespace Katas.BinaryGap
                 { 9,    2 },
                 { 529,  4 },
                 { 20,   1 },
-                { 15,   0 }
+                { 15,   0 },
+                { 1041, 5 },
+                { 2,    0 }
             };
         }
 
         [Test]
-        public void BinaryGap_TableTest()
+        public void TestnotnullBinaryGap()
+        {
+            binarygap = new BinaryGap(0);
+            Assert.NotNull(binarygap);
+        }
+
+        [Test]
+        public void TestFindBinaryGap()
         {
             foreach (var pair in testTable)
             {
-                Assert.AreEqual(pair.Value, BinaryGap.GetGapSize(pair.Key));
+                binarygap = new BinaryGap(pair.Key);
+                Assert.AreEqual(pair.Value, binarygap.Findbinarygap());
             }
         }
     }

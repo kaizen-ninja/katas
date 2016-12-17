@@ -1,39 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Katas.BinaryGap
 {
-    static class BinaryGap
+    public class BinaryGap
     {
-        const int TwoPowerOfIntMax = 32;
+        public string binary { get; private set; }  //  Число в двоичном виде
+        int n;                                      //  Длина binaryGap
+        int number;                                 //  Число в десятичном виде
 
-        public static int GetGapSize(int number)
+        //  Конструктор класса
+        public BinaryGap(int number)
         {
-            bool started = false;
-            int maxGapLenght = 0;
-            int currentGapLength = 0;
-
-            for (int caret = 0; caret < TwoPowerOfIntMax; caret++)
-            {
-                int mask = 1 << caret;
-                if ((number & mask) == mask)
-                {
-                    if (started)
-                    {
-                        maxGapLenght = Math.Max(maxGapLenght, currentGapLength);
-                        currentGapLength = 0;
-                    }
-                    else started = true;
-                }
-                else if (started)
-                {
-                    currentGapLength++;
-                }
-            }
-            return maxGapLenght;
+            this.number = number;
         }
+
+        //  Находит бинарный разрыв
+        public int Findbinarygap()
+        {
+            binary = Convert.ToString(number, 2);
+
+            int n1 = 0;
+            int n2 = n1;
+            for (int i = 0; i < binary.Length; i++)
+            {
+                if (binary[i] == '0')
+                {
+                    n1++;
+                }
+                else
+                    n1 = 0;
+
+                if (n1 > n)
+                {
+                    n2 = n;
+                    n = n1;
+                }
+
+                if (i == binary.Length - 1 && binary[i] == '0')
+                    n = n2;
+            }
+
+            return n;
+        }
+
     }
 }
