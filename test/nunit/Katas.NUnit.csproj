@@ -54,6 +54,9 @@
   <ItemGroup>
     <Compile Include="BinaryGap\BinaryGap.cs" />
     <Compile Include="BinaryGap\TestBinaryGap.cs" />
+    <Compile Include="GameOfLife\GameOfLife.cs" />
+    <Compile Include="Labyrinth\Labyrinth.cs" />
+    <Compile Include="Labyrinth\TestLabyrinth.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
@@ -70,9 +73,6 @@
       <Link>FizzBuzz\FizzBuzz.cs</Link>
     </Compile>
     <Compile Include="FizzBuzz\TestFizzBuzz.cs" />
-    <Compile Include="..\..\src\GameOfLife\GameOfLife.cs">
-      <Link>GameOfLife\GameOfLife.cs</Link>
-    </Compile>
     <Compile Include="GameOfLife\TestGameOfLife.cs" />
     <Compile Include="..\..\src\HarryPotter\HarryPotter.cs">
       <Link>HarryPotter\HarryPotter.cs</Link>

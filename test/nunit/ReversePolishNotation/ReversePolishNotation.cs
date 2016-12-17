@@ -3,93 +3,90 @@ using System.Collections.Generic;
 
 namespace Katas.ReversePolishNotation
 {
-    class ReversePolishNotationSession
+    class ReversePolishNotation
     {
-        string expression;
+        string input;       //  Выражение   
+        double result = 0;  //  Результат выражения
 
-        int caret = 0;
-
-        char currentChar { get { return expression[caret]; } }
-        bool eof { get { return caret >= expression.Length; } }
-
-        Dictionary<char, Func<double, double, double>> operationsTable;
-
-        Stack<double> numbers;
-        Stack<Func<double, double, double>> operations;
-
-        public ReversePolishNotationSession(string expression)
+        //  Конструктор класса
+        public ReversePolishNotation(string input)
         {
-            this.expression = expression;
-            numbers = new Stack<double>();
-            operations = new Stack<Func<double, double, double>>();
-
-            operationsTable = new Dictionary<char, Func<double, double, double>>
-            {
-                { '+', (a, b) => a + b },
-                { '-', (a, b) => a - b },
-                { '*', (a, b) => a * b },
-                { '/', (a, b) => a / b }
-            };
+            this.input = input;
         }
 
-        public double Evaluate()
+        //  Метод вычисляющий результат постфиксной записи выражения
+        public double Calculate()
         {
-            caret = 0;
-
-            while(!eof)
+            Stack<double> stack = new Stack<double>();                          //Временный стек для решения
+            try
             {
-                SkipWhitespaces();
-                if (eof) break;
-
-                if (char.IsDigit(currentChar))
+                for (int i = 0; i < input.Length; i++)                          //Для каждого символа в строке
                 {
-                    ProceedStack();
-                    numbers.Push(ResolveNumber());
+                    //Если символ - цифра, то читаем все число и записываем на вершину стека
+                    if (Char.IsDigit(input[i]) /*|| output[i] == '-' && i+1 < output.Length && Char.IsDigit(output[i+1])*/)
+                    {
+                        string a = string.Empty;
+
+                        while (!IsDelimeter(input[i]))  //Пока не разделитель
+                        {
+                            a += input[i];
+                            i++;
+                            if (i == input.Length) break;
+                        }
+                        stack.Push(double.Parse(a));
+                        i--;
+                    }
+                    else if (IsOperator(input[i]))                              //Если символ - оператор
+                    {
+                        //Берем два последних значения из стека
+                        double a = stack.Pop();
+                        double b = stack.Pop();
+
+                        switch (input[i]) //И производим над ними действие, согласно оператору
+                        {
+                            case '+':
+                                result = b + a;
+                                break;
+                            case '-':
+                                result = b - a;
+                                break;
+                            case '*':
+                                result = b * a;
+                                break;
+                            case '/':
+                                result = b / a;
+                                break;
+                            case '^':
+                                result = double.Parse(Math.Pow(double.Parse(b.ToString()), double.Parse(a.ToString())).ToString());
+                                break;
+                        }
+                        stack.Push(result); //Результат вычисления записываем обратно в стек
+                    }
                 }
-                else
-                {
-                    var op = ResolveOperation();
-                    ProceedStack();
-                    operations.Push(op);
-                    ProceedStack();
-                }
+                return stack.Peek(); //Забираем результат всех вычислений из стека и возвращаем его
             }
-            ProceedStack();
-
-            return numbers.Pop();
-        }
-        void ProceedStack()
-        {
-            while (operations.Count > 0)
+            catch (Exception)
             {
-                numbers.Push(operations.Pop()(numbers.Pop(), numbers.Pop()));
+                Console.WriteLine("Ошибка: введены не вычислительные переменные!");
+                return 0;
             }
         }
 
-        double ResolveNumber()
+        //  Метод возвращает true, если проверяемый символ - разделитель
+        bool IsDelimeter(char c)
         {
-            int started = caret;
-            do
-            {
-                caret++;
-            } while (!eof && char.IsDigit(currentChar));
-
-            return double.Parse(expression.Substring(started, caret - started));
+            if ((" =".IndexOf(c) != -1))
+                return true;
+            return false;
         }
 
-        void SkipWhitespaces()
+        //  Метод возвращает true, если проверяемый символ - оператор
+        bool IsOperator(char с)
         {
-            while (!eof && char.IsWhiteSpace(currentChar))
-                caret++;
+            if (("+-/*^()".IndexOf(с) != -1))
+                return true;
+            return false;
         }
 
-        Func<double, double, double> ResolveOperation()
-        {
-            Func<double, double, double> op;
-            if (!operationsTable.TryGetValue(currentChar, out op))
-                throw new Exception("Can't resolve expression, invalid symbol " + currentChar);
-            caret++;
-            return op;
-        }
     }
 }
