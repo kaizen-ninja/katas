@@ -22,5 +22,12 @@ namespace Katas.Equi
             int[] arr = { -1, 3, -4, 5, 1, -6, 2, 1 };
             Assert.AreEqual(new int[] { 0, 1, 0, 1, 0, 0, 0, 1}, et.Solution(arr));
         }
+
+        [Test]
+        public void SolutionTestTwo()
+        {
+            int[] arr = { 2, -5, -3, -2, 4, -5 };
+            Assert.AreEqual(new int[] { 0, 0, 1, 0, 0, 0 }, et.Solution(arr));
+        }
     }
 }

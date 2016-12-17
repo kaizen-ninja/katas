@@ -6,68 +6,28 @@ namespace Katas.TheCalcStatsKata
 {
     public class CalcStat
     {
-        #region Members
-
-        public enum CalcStatKeys
+        public static void Solution(int[] arr)
         {
-            Minimum = 1,
-            Maximum = 2,
-            ElementCount = 3,
-            Average = 4
-        }
-
-        #endregion
-
-        #region Public Methods
-
-        public static string NumberStats(IList<int> numbers, CalcStatKeys keys)
-        {
-            switch (keys)
+            int n = 0, min = 0, max = 0;
+            double AverageValue = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
-                case CalcStatKeys.Minimum:
-                    return GetMinimumValue(numbers);
-                case CalcStatKeys.Maximum:
-                    return GetMaximumValue(numbers);
-                case CalcStatKeys.ElementCount:
-                    return GetElementCount(numbers);
-                case CalcStatKeys.Average:
-                    return GetSeriesAverage(numbers);
+                n++;
+                AverageValue += arr[i];
             }
-            return null;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (min > arr[i])
+                {
+                    min = arr[i];
+                }
+                if (max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+            AverageValue = AverageValue / arr.Length;
         }
-
-        #endregion
-
-        #region Private Methods
-
-        private static string GetMinimumValue(IEnumerable<int> numbers)
-        {
-            return numbers == null
-                ? null
-                : numbers.Min().ToString(CultureInfo.InvariantCulture);
-        }
-
-        private static string GetMaximumValue(IEnumerable<int> numbers)
-        {
-            return numbers == null
-                ? null
-                : numbers.Max().ToString(CultureInfo.InvariantCulture);
-        }
-
-        private static string GetElementCount(IEnumerable<int> numbers)
-        {
-            return numbers == null
-                ? null
-                : numbers.Count().ToString(CultureInfo.InvariantCulture);
-        }
-
-        private static string GetSeriesAverage(IEnumerable<int> numbers)
-        {
-            return numbers == null
-                ? null
-                : numbers.Average().ToString(CultureInfo.InvariantCulture);
-        }
-
-        #endregion
     }
 }

@@ -11,39 +11,33 @@ namespace Katas.Equi
         public int[] Solution(int[] arr)
         {
             int[] result = new int[arr.Length];
-            int left = 0;               //  Левая граница массива 
-            int rigth = 0;              //  Правая граница массива 
-            int sum = 0;                //  Сумма элементов массива
+            int left = 0;               
+            int rigth = 0;              
             int j = 0;
 
             for (int i = 0; i < arr.Length; i++)
             {
-                sum += arr[i];
+                rigth += arr[i];
             }
 
             do
             {
-                if (rigth != 0 || sum != 0)
+                rigth -= arr[j];
+                if (left == rigth)
                 {
-                    sum -= arr[j];
-                    rigth = sum;
-                    if (left == rigth)
-                    {
-                        result[j] = 1;
-                    }
-                    else
-                    {
-                        result[j] = 0;
-                    }
+                    result[j] = 1;
                     left += arr[j];
                     j++;
+                    continue;
                 }
                 else
                 {
-                    break;
+                    result[j] = 0;
+                    left += arr[j];
+                    j++;
+                    continue;
                 }
-                continue;
-            } while (left != rigth);
+            } while (j != arr.Length);
             return result;
         }
     }
