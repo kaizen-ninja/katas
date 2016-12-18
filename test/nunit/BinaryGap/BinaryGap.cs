@@ -1,39 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Katas.BinaryGap
 {
-    static class BinaryGap
+    public class BinaryGap
     {
-        const int TwoPowerOfIntMax = 32;
-
-        public static int GetGapSize(int number)
+        public int GetGap(int N)
         {
-            bool started = false;
-            int maxGapLenght = 0;
-            int currentGapLength = 0;
+            Stack<int> binar = new Stack<int>();
+            int temp = N;
+            int counter = 0;
+            Stack<int> counterStack = new Stack<int>();
 
-            for (int caret = 0; caret < TwoPowerOfIntMax; caret++)
+            //N to binary & counting "0"
+            while (temp != 0)
             {
-                int mask = 1 << caret;
-                if ((number & mask) == mask)
+                binar.Push(temp % 2);
+                temp = temp / 2;
+                if (binar.Peek() == 0)
                 {
-                    if (started)
-                    {
-                        maxGapLenght = Math.Max(maxGapLenght, currentGapLength);
-                        currentGapLength = 0;
-                    }
-                    else started = true;
+                    counter++;
                 }
-                else if (started)
+                if (binar.Peek() == 1)
                 {
-                    currentGapLength++;
+                    counterStack.Push(counter);
+                    counter = 0;
+                    if (counterStack.Peek() == 0)
+                        counterStack.Pop();
                 }
             }
-            return maxGapLenght;
+
+            if (counterStack.Count == 0)
+                return 0;
+
+            //searching for biggest counter of "0"
+            temp = counterStack.Pop();
+            while (counterStack.Count != 0)
+            {
+                if (temp > counterStack.Peek())
+                    counterStack.Pop();
+                else
+                    if (temp < counterStack.Peek())
+                        temp = counterStack.Pop();
+            }
+
+            return temp;
         }
     }
 }

@@ -1,95 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Katas.ReversePolishNotation
 {
-    class ReversePolishNotationSession
+    public class ReversePolishNotation
     {
-        string expression;
-
-        int caret = 0;
-
-        char currentChar { get { return expression[caret]; } }
-        bool eof { get { return caret >= expression.Length; } }
-
-        Dictionary<char, Func<double, double, double>> operationsTable;
-
-        Stack<double> numbers;
-        Stack<Func<double, double, double>> operations;
-
-        public ReversePolishNotationSession(string expression)
+        public string RPN(string expression)
         {
-            this.expression = expression;
-            numbers = new Stack<double>();
-            operations = new Stack<Func<double, double, double>>();
-
-            operationsTable = new Dictionary<char, Func<double, double, double>>
-            {
-                { '+', (a, b) => a + b },
-                { '-', (a, b) => a - b },
-                { '*', (a, b) => a * b },
-                { '/', (a, b) => a / b }
-            };
-        }
-
-        public double Evaluate()
-        {
-            caret = 0;
-
-            while(!eof)
-            {
-                SkipWhitespaces();
-                if (eof) break;
-
-                if (char.IsDigit(currentChar))
+                Stack<char> texas;
+                string strOut = "";
+                string strIn1 = "";
+                expression += " ";
+                texas = new Stack<char>();
+                for (int i = 0; i < expression.Length; i++)
                 {
-                    ProceedStack();
-                    numbers.Push(ResolveNumber());
+                    if (Char.IsLetter(expression[i]))
+                        strIn1 = "letter";
+                    if (Char.IsNumber(expression[i]) || expression[i] == '.' || expression[i] == ',')
+                        strIn1 = "num";
+                    if (expression[i] == '+' || expression[i] == '-')
+                        strIn1 = "second";
+                    if (expression[i] == '/' || expression[i] == '*' || expression[i] == '^')
+                        strIn1 = "first";
+                    if (expression[i] == '(')
+                        strIn1 = "open_break";
+                    if (expression[i] == ')')
+                        strIn1 = "close_break";
+                    if (expression[i] == ' ')
+                        strIn1 = "empty";
+
+                    switch (strIn1)
+                    {
+                        case "num":
+                        case "letter":
+                            strOut = strOut + expression[i];
+                            break;
+
+                        case "second":
+                            if (texas.Count == 0)
+                            {
+                                texas.Push(expression[i]);
+                                break;
+                            }
+                            else
+                                while (texas.Peek() == '/' || texas.Peek() == '*' || texas.Peek() == '^')
+                                {
+                                    strOut = strOut + texas.Pop();
+
+                                    if (texas.Count == 0)
+                                        break;
+                                    if (texas.Peek() == '-' || texas.Peek() == '+')
+                                        strOut = strOut + texas.Pop();
+                                    if (texas.Count == 0)
+                                        break;
+                                }
+                            texas.Push(expression[i]);
+
+                            if (texas.Count != 0 && texas.Peek() == '(')
+                                texas.Push(expression[i]);
+                            break;
+                        case "first":
+                            texas.Push(expression[i]);
+                            break;
+
+                        case "open_break":
+                            texas.Push(expression[i]);
+                            break;
+
+                        case "close_break":
+                            while (texas.Peek() != '(')
+                                strOut = strOut + texas.Pop();
+                            texas.Pop();
+                            break;
+                        case "empty":
+                            while (texas.Count != 0)
+                            {
+                                strOut = strOut + texas.Pop();
+                            }
+                            break;
+                    }
                 }
-                else
-                {
-                    var op = ResolveOperation();
-                    ProceedStack();
-                    operations.Push(op);
-                    ProceedStack();
-                }
-            }
-            ProceedStack();
-
-            return numbers.Pop();
-        }
-        void ProceedStack()
-        {
-            while (operations.Count > 0)
-            {
-                numbers.Push(operations.Pop()(numbers.Pop(), numbers.Pop()));
+                return strOut;
             }
         }
-
-        double ResolveNumber()
-        {
-            int started = caret;
-            do
-            {
-                caret++;
-            } while (!eof && char.IsDigit(currentChar));
-
-            return double.Parse(expression.Substring(started, caret - started));
-        }
-
-        void SkipWhitespaces()
-        {
-            while (!eof && char.IsWhiteSpace(currentChar))
-                caret++;
-        }
-
-        Func<double, double, double> ResolveOperation()
-        {
-            Func<double, double, double> op;
-            if (!operationsTable.TryGetValue(currentChar, out op))
-                throw new Exception("Can't resolve expression, invalid symbol " + currentChar);
-            caret++;
-            return op;
-        }
-    }
 }
