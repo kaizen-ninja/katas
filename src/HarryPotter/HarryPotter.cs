@@ -1,47 +1,48 @@
 ﻿using System;
+using System.Linq;
 
 namespace Katas.TheHarryPotterKata
 {
     public class HarryPotterShop
     {
-        float[] discountTiers;
-        float bookPrice;
-
-        public HarryPotterShop(float bookPrice, params float[] discounts)
+        public double HarryPotter(int n1 = 0, int n2 = 0, int n3 = 0, int n4 = 0, int n5 = 0)
         {
-            this.bookPrice = bookPrice;
-            discountTiers = discounts.Clone() as float[];
-        }
-
-        public float GetBasketSum(params int[] basketMask)
-        {
-            float sum = 0;
-            int uniqueAmount;
-            do
+            double result = 0;
+            double bookPrice = 8;
+            int[] a = { n1, n2, n3, n4, n5 };
+            int count = 0;
+            while (a.Sum() > 0)
             {
-                uniqueAmount = 0;
-                for (int i = 0; i < basketMask.Length; i++)
+                for (int i = 0; i < 5; i++)
                 {
-                    if (basketMask[i] > 0)
+                    if (a[i] > 0)
                     {
-                        basketMask[i]--;
-                        uniqueAmount++;
+                        a[i]--;
+                        count++;
                     }
                 }
-                sum += uniqueAmount * bookPrice * GetDiscount(uniqueAmount);
+                switch (count)
+                {
+                    case 1:
+                        result += bookPrice;
+                        break;
+                    case 2:
+                        result += bookPrice * count * 0.95;
+                        break;
+                    case 3:
+                        result += bookPrice * count * 0.90;
+                        break;
+                    case 4:
+                        result += bookPrice * count * 0.80;
+                        break;
+                    case 5:
+                        result += bookPrice * count * 0.75;
+                        break;
+                }
+                count = 0;
             }
-            while (uniqueAmount > 0);
 
-            return sum;
-        }
-
-        public float GetDiscount(int uniqueAmount)
-        {
-            if (--uniqueAmount < 0)
-            {
-                return 0f;
-            }
-            return discountTiers[Math.Min(uniqueAmount, discountTiers.Length - 1)];
+            return result;
         }
     }
 }

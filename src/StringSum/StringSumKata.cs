@@ -4,22 +4,26 @@ namespace Katas.TheStringSum
 {
     public class StringSumKata
     {
-        public static string Sum(string num1, string num2)
+        public int StringSum(string num1, string num2)
         {
-            var realNum1 = GetZeroWhenNullOrEmpty(num1);
-            var realNum2 = GetZeroWhenNullOrEmpty(num2);
-
-            return Convert.ToString(Add(realNum1, realNum2));
+            int result = 0;
+            string[] s = { num1, num2 };
+            foreach (string n in s)
+            {
+                if (IsNatural(n))
+                    result += int.Parse(n);
+            }
+            return result;
         }
 
-        private static string GetZeroWhenNullOrEmpty(string num1)
+        public bool IsNatural(string num)
         {
-            return string.IsNullOrEmpty(num1) ? "0" : num1;
-        }
-
-        private static int Add(string realNum1, string realNum2)
-        {
-            return int.Parse(realNum1) + int.Parse(realNum2);
+            int n;
+            bool isInt = int.TryParse(num, out n);
+            if (n > 0 && isInt)
+                return true;
+            else
+                return false;
         }
 
     }
