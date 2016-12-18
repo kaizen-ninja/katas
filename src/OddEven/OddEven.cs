@@ -4,79 +4,42 @@ namespace Katas.TheOddEvenKata
 {
     public class OddEven
     {
-        #region [ Public Methods ]
-
-        public static string PrintOddEven(int startNumber, int lastNumber)
+        public static string Run(int n)
         {
-            return GetOddEvenWithinRange(startNumber, lastNumber);
+            return DefineOddEvenOrPrime(n);
         }
 
-        public static string PrintSingleOddEven(int number)
+        public static string Run(int firstNum, int lastNum)
         {
-            return CheckSingleNumberOddEvenPrimeResult(number);
-        }
+            string result = "";
+            for (int i = firstNum; i < lastNum; i++)
+            {
+                result += DefineOddEvenOrPrime(i) + " ";
+            }
 
-        #endregion
-
-        #region [ RePrivate Methods ]
-
-        private static string CheckSingleNumberOddEvenPrimeResult(int number)
-        {
-            var result = string.Empty;
-            result = CheckSingleNumberOddEvenPrimeResult(result, number);
-            return result;
-        }
-
-        private static string GetOddEvenWithinRange(int startNumber, int lastNumber)
-        {
-            var result = string.Empty;
-            for (var number = startNumber < 0 ? 1 : startNumber; number <= lastNumber; number++)
-                result = CheckSingleNumberOddEvenPrimeResult(result, number);
-
-            return result;
-
-        }
-
-        private static string CheckSingleNumberOddEvenPrimeResult(string result, int number)
-        {
-            var newNumber = string.Empty;
-
-            var oddNumber = IsOddNumber(number) ? "Odd" : Convert.ToString(number);
-            var primenumber = IsPrimeNumber(number) ? Convert.ToString(number) : oddNumber;
-
-            if (!string.IsNullOrEmpty(newNumber))
-                newNumber += IsEvenNumber(number) ? "Even" : primenumber;
-            else
-                newNumber = IsEvenNumber(number) ? "Even" : primenumber;
-
-            result += " " + newNumber;
             return result.Trim();
         }
 
-        private static bool IsEvenNumber(int number)
+        private static string DefineOddEvenOrPrime(int n)
         {
-            return number >= 2 && number%2 == 0;
+            if (IsPrime(n))
+                return n.ToString();
+            else if (n % 2 == 0)
+                return "Even";
+            else if (n % 2 != 0)
+                return "Odd";
+
+            return "Error";
         }
 
-        private static bool IsOddNumber(int number)
+        private static bool IsPrime(int n)
         {
-            return (number%2 != 0);
-        }
-
-        private static bool IsPrimeNumber(int number)
-        {
-            if (number < 2) return false;
-            if (IsEvenNumber(number)) return false;
-            var divisble = 3;
-            while (divisble*divisble <= number)
+            for (int i = 2; i < Math.Sqrt(Math.Abs(n)) + 1; i++)
             {
-                if (number%divisble == 0) return false;
-                divisble += 2;
+                if (n % i == 0)
+                    return false;
             }
             return true;
-
         }
-
-        #endregion
     }
 }
