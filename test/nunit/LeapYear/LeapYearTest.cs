@@ -7,19 +7,14 @@ namespace Katas.TheLeapYearKata
     public class LeapYearTest
     {
         [Test]
-        public void CanTestForLeapYear()
+        [TestCase(2011, false)]
+        [TestCase(2000, true)]
+        [TestCase(1900, false)]
+        [TestCase(2004, true)]
+        [TestCase(1999, false)]
+        public void CanTestForLeapYears(int year, bool answer)
         {
-            Assert.That(true, Is.EqualTo(LeapYear.IsLeapYear(1996)));
-        }
-
-        [Test]
-        [TestCase(false, 2013)]
-        [TestCase(false, 2001)]
-        [TestCase(true, 1996)]
-        [TestCase(true, 1992)]
-        public void CanTestForLeapYears(bool expectedResult, int year)
-        {
-            Assert.That(expectedResult, Is.EqualTo(LeapYear.IsLeapYear(year)));
+            Assert.AreEqual(LeapYear.IsLeapYear(year), answer);
         }
     }
 }
