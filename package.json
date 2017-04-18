@@ -1,25 +1,26 @@
 {
-  "name": "katas-jasmine",
+  "name": "katas-mocha",
   "version": "1.0.0",
   "description": "Website",
-  "main": "index.html",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "gulp dev",
-    "prod": "gulp prod",
-    "test": "gulp test"
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "node_modules/.bin/eslint src/*.js spec/*.js",
+    "mocha": "node_modules/.bin/mocha spec/*.js"
   },
   "author": "NSpectator Team",
   "license": "MIT",
   "devDependencies": {
-    "del": "latest",
-    "event-stream": "~3.3.1",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^3.2.2",
-    "gulp-jasmine": "^2.3.0",
-    "gulp-uglify": "^1.2.0",
-    "jasmine-node": "latest",
-    "lodash": "^4.0.0"
+    "babel-eslint": "^6.0.3",
+    "chai": "^3.5.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^1.0.2",
+    "eslint-plugin-react": "^5.0.1",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "eslint": "^2.8.0",
+    "sinon-chai": "^2.8.0"
   }
 }
