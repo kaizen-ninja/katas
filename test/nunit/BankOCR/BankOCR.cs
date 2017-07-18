@@ -64,6 +64,23 @@ namespace Katas.BankOCRKata
             new Symbol(_digit_4, "4"), new Symbol(_digit_5, "5"), new Symbol(_digit_6, "6"), new Symbol(_digit_7, "7"),
             new Symbol(_digit_8, "8"), new Symbol(_digit_9, "9")};
 
+        bool isChecksumCorrect(string entry)
+        {
+            int checksum = 0;
+
+            if(entry.Length != 9)
+            {
+                throw new System.ArgumentException();
+            }
+
+            for(int i = 0; i < 9; i++)
+            {
+                checksum += (9-i) * (entry[i] - '0');
+            }
+
+            return (checksum % 11) == 0;
+        }
+
         public string parseEntry(string entry)
         {
             string line1, line2, line3;
@@ -101,7 +118,17 @@ namespace Katas.BankOCRKata
 
         public string parseEntryAndCalcChecksum(string entry)
         {
-            return parseEntry(entry);
+            string result = parseEntry(entry);
+
+            if(result.Contains('?'))
+            {
+                result += " ILL";
+            } else if(!isChecksumCorrect(result))
+            {
+                result += " ERR";
+            }
+
+            return result;
         }
 
         public string parseEntryAndGuessNumber(string entry)

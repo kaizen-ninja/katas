@@ -109,7 +109,7 @@ namespace Katas.BankOCRKata
             Assert.That(bank_ocr.parseEntryAndCalcChecksum(
                 "    _  _     _  _  _  _  _ " +
                 "  | _| _||_| _ |_   ||_||_|" +
-                "  ||_  _|  | _||_|  ||_| _"
+                "  ||_  _|  | _||_|  ||_| _ "
                 ), Is.EqualTo("1234?678? ILL"));
         }
 
