@@ -75,10 +75,65 @@ namespace Katas.BankOCRKata
 
             for(int i = 0; i < 9; i++)
             {
+                if (entry[i] == '?')
+                    return false;
+
                 checksum += (9-i) * (entry[i] - '0');
             }
 
             return (checksum % 11) == 0;
+        }
+
+        int symbolsDifference(string chars1, string chars2)
+        {
+            int difference = 0;
+
+            if (chars1.Length != 9 || chars2.Length != 9)
+            {
+                throw new System.ArgumentException();
+            }
+
+            for(int i = 0; i < 9; i++)
+            {
+                if (chars1[i] != chars2[i])
+                    difference++;
+            }
+
+            return difference;
+        }
+
+        List<string> guessNumber(string entry, int start_from = 0)
+        {
+            string number = parseEntry(entry);
+            List<string> numbers = new List<string>();
+
+            if (start_from >= 9)
+                return numbers;
+
+            foreach(Symbol sym in _digits)
+            {
+                string chars = entry.Substring(start_from * 3, 3) + entry.Substring(3 * (9 + start_from), 3) + entry.Substring(3 * (2 * 9 + start_from), 3);
+                int difference = symbolsDifference(chars, sym.Chars);
+
+                if (difference == 1)
+                {
+                    string new_entry = entry.Remove(start_from * 3, 3).Insert(start_from * 3, sym.Chars.Substring(0, 3)).
+                        Remove(3 * (9 + start_from), 3).Insert(3 * (9 + start_from), sym.Chars.Substring(3, 3)).
+                        Remove(3 * (2 * 9 + start_from), 3).Insert(3 * (2 * 9 + start_from), sym.Chars.Substring(6, 3));
+
+                    string new_number = parseEntry(new_entry);
+
+                    if (isChecksumCorrect(new_number))
+                    {
+                        numbers.Add(new_number);
+                    } 
+                } else if (difference == 0)
+                {
+                    numbers.AddRange(guessNumber(entry, start_from + 1));
+                }
+            }
+
+            return numbers;
         }
 
         public string parseEntry(string entry)
@@ -133,7 +188,26 @@ namespace Katas.BankOCRKata
 
         public string parseEntryAndGuessNumber(string entry)
         {
-            return parseEntryAndCalcChecksum(entry);
+            string result = parseEntryAndCalcChecksum(entry);
+
+            if(result.Length != 9)
+            {
+                List<string> results = guessNumber(entry);
+
+                if (results.Count == 1)
+                    result = results[0];
+                else if(results.Count > 1)
+                {
+                    result = result.Substring(0, 9) + " AMB ['" + results[0] + "'";
+                    
+                    for (int i = 1; i < results.Count; i++)
+                        result += ", '" + results[i] + "'";
+
+                    result += "]";
+                }
+            }
+
+            return result;
         }
     }
 }
