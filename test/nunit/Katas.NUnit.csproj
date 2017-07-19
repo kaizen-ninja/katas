@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankOCR\BankOCR.cs" />
     <Compile Include="BinaryGap\BinaryGap.cs" />
     <Compile Include="BinaryGap\TestBinaryGap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="..\..\src\WordWrap\WordWrap.cs">
       <Link>WordWrap\WordWrap.cs</Link>
     </Compile>
+    <Compile Include="BankOCR\TestBankOCR.cs" />
     <Compile Include="WordWrap\WordWrapTest.cs" />
   </ItemGroup>
   <ItemGroup>
