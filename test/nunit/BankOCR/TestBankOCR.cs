@@ -9,7 +9,7 @@ namespace Katas.BankOCRKata
 {
     [TestFixture]
     [Category("BinaryGapKata")]
-    class TestBankOCR
+    public class TestBankOCR
     {
         #region Test Use Case 1
 

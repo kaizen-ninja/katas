@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Katas.BankOCRKata
 {
-    class BankOCR
+    public class BankOCR
     {
         const string _digit_0 = " _ " +
                                 "| |" +
@@ -104,12 +104,12 @@ namespace Katas.BankOCRKata
 
         List<string> guessNumber(string entry, int start_from = 0)
         {
-            string number = parseEntry(entry);
+            // string number = parseEntry(entry);
             List<string> numbers = new List<string>();
 
             if (start_from >= 9)
                 return numbers;
-
+            
             foreach(Symbol sym in _digits)
             {
                 string chars = entry.Substring(start_from * 3, 3) + entry.Substring(3 * (9 + start_from), 3) + entry.Substring(3 * (2 * 9 + start_from), 3);
@@ -127,7 +127,8 @@ namespace Katas.BankOCRKata
                     {
                         numbers.Add(new_number);
                     } 
-                } else if (difference == 0)
+                }
+                else if (difference == 0)
                 {
                     numbers.AddRange(guessNumber(entry, start_from + 1));
                 }
@@ -155,7 +156,8 @@ namespace Katas.BankOCRKata
                 string digit = line1.Substring(i * 3, 3)+ line2.Substring(i * 3, 3)+ line3.Substring(i * 3, 3);
                 bool char_founded = false;
 
-                foreach(Symbol sym in _digits) {
+                foreach(Symbol sym in _digits)
+                {
                     if(sym.Chars.Equals(digit))
                     {
                         result += sym.Val;
@@ -178,7 +180,8 @@ namespace Katas.BankOCRKata
             if(result.Contains('?'))
             {
                 result += " ILL";
-            } else if(!isChecksumCorrect(result))
+            }
+            else if(!isChecksumCorrect(result))
             {
                 result += " ERR";
             }
@@ -195,11 +198,13 @@ namespace Katas.BankOCRKata
                 List<string> results = guessNumber(entry);
 
                 if (results.Count == 1)
+                {
                     result = results[0];
-                else if(results.Count > 1)
+                }
+                else if (results.Count > 1)
                 {
                     result = result.Substring(0, 9) + " AMB ['" + results[0] + "'";
-                    
+
                     for (int i = 1; i < results.Count; i++)
                         result += ", '" + results[i] + "'";
 
