@@ -8,6 +8,8 @@ namespace Katas.BankOCRKata
 {
     public class BankOCR
     {
+
+        #region Private
         const string _digit_0 = " _ " +
                                 "| |" +
                                 "|_|";
@@ -137,6 +139,8 @@ namespace Katas.BankOCRKata
             return numbers;
         }
 
+        #endregion
+
         public string parseEntry(string entry)
         {
             string line1, line2, line3;
@@ -173,6 +177,83 @@ namespace Katas.BankOCRKata
             return result;
         }
 
+        public enum FileParsingStrategy
+        {
+            PARSE_ONLY = 0,
+            PARSE_AND_CHECK_SUM,
+            PARSE_AND_GUESS_NUMBER
+        };
+
+        public string parseFile(string text, FileParsingStrategy strategy = FileParsingStrategy.PARSE_ONLY)
+        {
+            int index, last_index;
+            string last_entry = "";
+
+            if (String.IsNullOrEmpty(text))
+                return "";
+
+            last_index = index = text.Length - 1;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if(index < 0)
+                {
+                    throw new System.ArgumentException("Not all entries was read:" + last_entry + ":" + text);
+                }
+
+                if(text[index] != '\n')
+                {
+                    throw new System.ArgumentException("No new line at end of entry:" + last_entry + ":" + text);
+                }
+
+                index--;
+
+                while(index >= 0)
+                {
+                    if(text[index] == '\n')
+                    {
+                        break;
+                    } else
+                    {
+                        index--;
+                    }
+                }
+
+                string entryline = text.Substring(index + 1, last_index - index - 1);
+
+                if(entryline.Length != 3*9)
+                {
+                    throw new System.ArgumentException("Entry line should have size of 27 characters:"+entryline+":"+text);
+                }
+
+                last_entry = entryline + last_entry;
+
+                last_index = index;
+            }
+            
+            if (String.IsNullOrEmpty(last_entry))
+                return parseFile(text.Substring(0, last_index+1), strategy);
+            else
+            {
+                string entry_result = "";
+
+                switch(strategy)
+                {
+                    case FileParsingStrategy.PARSE_ONLY:
+                        entry_result = parseEntry(last_entry);
+                        break;
+                    case FileParsingStrategy.PARSE_AND_CHECK_SUM:
+                        entry_result = parseEntryAndCalcChecksum(last_entry);
+                        break;
+                    case FileParsingStrategy.PARSE_AND_GUESS_NUMBER:
+                        entry_result = parseEntryAndGuessNumber(last_entry);
+                        break;
+                }
+
+                return parseFile(text.Substring(0, last_index + 1), strategy) + entry_result + "\n";
+            }
+        }
+
         public string parseEntryAndCalcChecksum(string entry)
         {
             string result = parseEntry(entry);
@@ -187,6 +268,11 @@ namespace Katas.BankOCRKata
             }
 
             return result;
+        }
+
+        public string parseFileAndCalcChecksum(string text)
+        {
+            return parseFile(text, FileParsingStrategy.PARSE_AND_CHECK_SUM);
         }
 
         public string parseEntryAndGuessNumber(string entry)
@@ -213,6 +299,11 @@ namespace Katas.BankOCRKata
             }
 
             return result;
+        }
+
+        public string parseFileAndGuessNumber(string text)
+        {
+            return parseFile(text, FileParsingStrategy.PARSE_AND_GUESS_NUMBER);
         }
     }
 }
